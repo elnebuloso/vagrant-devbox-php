@@ -20,7 +20,7 @@
     - ntpdate
   notify: essentials_update_ntp
 
-- name: install essential packages
+- name: install packages
   apt: pkg={{item}} state=present
   with_items:
     - nano

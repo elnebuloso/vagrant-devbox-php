@@ -19,4 +19,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.provision "shell", path: "provision/keys.sh"
     config.vm.provision "shell", path: "provision/ansible.sh"
     config.vm.provision "shell", path: "provision/ansible-playbook.sh"
+
+    # config.vm.provision "shell", inline: "export PYTHONUNBUFFERED=1"
+    # config.vm.provision "shell", inline: "sudo ansible-playbook -i \"localhost,\" -c local /vagrant/ansible/playbook.yml"
 end

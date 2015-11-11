@@ -1,0 +1,9 @@
+---
+- name: webserver_php5enmod_mcrypt
+  command: php5enmod mcrypt
+
+- name: webserver_php5enmod_xhprof
+  command: php5enmod xhprof
+
+- name: webserver_restart_apache2
+  service: name=apache2 enabled=yes state=restarted
