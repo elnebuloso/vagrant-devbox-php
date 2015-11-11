@@ -1,0 +1,6 @@
+---
+- name: essentials_update_timezone
+  command: dpkg-reconfigure --frontend noninteractive tzdata
+
+- name: essentials_update_ntp
+  command: ntpdate -u ntp1.ptb.de

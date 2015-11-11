@@ -1,0 +1,33 @@
+---
+- name: update apt cache
+  apt: update_cache=yes
+
+- name: configure the aliases
+  template: src=alias.tpl dest=/root/.bash_aliases
+
+- name: configure the timezone
+  template: src=timezone.tpl dest=/etc/timezone
+  notify: essentials_update_timezone
+
+- locale_gen: name=de_DE state=present
+- locale_gen: name=de_DE@euro state=present
+- locale_gen: name=de_DE.UTF-8 state=present
+
+- name: install ntp services
+  apt: pkg={{item}} state=present
+  with_items:
+    - ntp
+    - ntpdate
+  notify: essentials_update_ntp
+
+- name: install essential packages
+  apt: pkg={{item}} state=present
+  with_items:
+    - nano
+    - htop
+    - locate
+    - curl
+    - finger
+    - software-properties-common
+    - python-passlib
+    - python-pip

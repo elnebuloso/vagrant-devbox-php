@@ -16,6 +16,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.network "private_network", ip: "192.168.33.100"
     config.vm.network "public_network", ip: "192.168.178.100", bridge: "Realtek PCIe GBE Family Controller"
 
-    config.vm.provision "shell", path: "provision/apt.sh"
     config.vm.provision "shell", path: "provision/keys.sh"
+    config.vm.provision "shell", path: "provision/ansible.sh"
+    config.vm.provision "shell", path: "provision/ansible-playbook.sh"
 end
