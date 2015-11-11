@@ -1,0 +1,35 @@
+---
+- name: install container redis
+  docker:
+    name: ansible-semaphore-redis
+    image: redis
+    state: started
+
+- name: install container mongo
+  docker:
+    name: ansible-semaphore-mongo
+    image: mongo
+    state: started
+
+- name: install container semaphore
+  docker:
+    name: ansible-semaphore
+    image: castawaylabs/semaphore
+    state: started
+    links:
+    - "ansible-semaphore-redis:redis"
+    - "ansible-semaphore-mongo:mongo"
+    ports:
+    - "49154:80"
+    env:
+      MONGODB_URL: mongodb://mongo/semaphore
+      REDIS_HOST: redis
+
+- name: create apache2 site
+  template: src=vhost.conf dest=/etc/apache2/sites-available/49154-semaphore.conf
+
+- name: enable apache2 sites
+  command: a2ensite 49154-semaphore
+  args:
+    creates: /etc/apache2/sites-enabled/49154-semaphore.conf
+  notify: webserver_restart_apache2

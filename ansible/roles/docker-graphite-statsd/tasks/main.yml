@@ -17,6 +17,4 @@
   command: a2ensite 49153-graphite
   args:
     creates: /etc/apache2/sites-enabled/49153-graphite.conf
-
-- name: restart apache2
-  service: name=apache2 enabled=yes state=restarted
+  notify: webserver_restart_apache2

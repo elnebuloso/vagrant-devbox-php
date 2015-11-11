@@ -10,12 +10,10 @@
       GF_SECURITY_ADMIN_PASSWORD: welcome
 
 - name: create apache2 site
-  template: src=vhost.tpl dest=/etc/apache2/sites-available/49152-grafana.conf
+  template: src=vhost.conf dest=/etc/apache2/sites-available/49152-grafana.conf
 
 - name: enable apache2 sites
   command: a2ensite 49152-grafana
   args:
     creates: /etc/apache2/sites-enabled/49152-grafana.conf
-
-- name: restart apache2
-  service: name=apache2 enabled=yes state=restarted
+  notify: webserver_restart_apache2
