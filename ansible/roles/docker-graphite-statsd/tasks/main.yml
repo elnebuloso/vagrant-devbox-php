@@ -10,7 +10,7 @@
     - "8125:8125/udp"
     - "8126:8126"
 
-- name: create apache2 site
+- name: create apache2 sites
   template: src=vhost.conf dest=/etc/apache2/sites-available/49153-graphite.conf
 
 - name: enable apache2 sites

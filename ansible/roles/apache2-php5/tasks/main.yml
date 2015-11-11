@@ -37,3 +37,18 @@
     - proxy_http
     - headers
   notify: webserver_restart_apache2
+
+- name: create apache2 sites
+  template: src=sites/{{item}}.conf dest=/etc/apache2/sites-available/{{item}}.conf
+  with_items:
+    - 000-default
+    - 100-dynamic-hosts
+
+- name: enable apache2 sites
+  command: a2ensite {{item}}
+  args:
+    creates: /etc/apache2/sites-enabled/{{item}}.conf
+  with_items:
+    - 000-default
+    - 100-dynamic-hosts
+  notify: webserver_restart_apache2

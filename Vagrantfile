@@ -21,4 +21,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     # provisioning over ansible playbook
     config.vm.provision "shell", inline: "sudo PYTHONUNBUFFERED=1 ansible-playbook -i \"localhost,\" -c local /vagrant/ansible/playbook.yml"
+
+    # synced folders
+    # todo configuration over config.yml
+    config.vm.synced_folder "D:\\web", "/var/www/"
+    config.vm.synced_folder "D:\\web-builds", "/var/builds/"
+    config.vm.synced_folder "D:\\web-releases", "/var/releases/"
 end

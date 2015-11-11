@@ -1,0 +1,8 @@
+---
+- name: install packages
+  apt: pkg={{item}} state=present
+  with_items:
+    - optipng
+    - jpegoptim
+    - libclosure-compiler-java
+    - yui-compressor

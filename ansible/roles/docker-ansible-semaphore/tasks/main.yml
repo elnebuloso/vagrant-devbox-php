@@ -25,7 +25,7 @@
       MONGODB_URL: mongodb://mongo/semaphore
       REDIS_HOST: redis
 
-- name: create apache2 site
+- name: create apache2 sites
   template: src=vhost.conf dest=/etc/apache2/sites-available/49154-semaphore.conf
 
 - name: enable apache2 sites
