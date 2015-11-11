@@ -1,0 +1,11 @@
+---
+- hosts: all
+  vars_files:
+    - vars/all.yml
+  roles:
+    - docker
+    - docker-mysql
+    - docker-memcached
+    - docker-mongo
+    - docker-grafana
+    - docker-graphite-statsd

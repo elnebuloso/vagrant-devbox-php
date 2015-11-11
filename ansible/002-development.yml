@@ -3,6 +3,4 @@
   vars_files:
     - vars/all.yml
   roles:
-    - essentials
-    - apache2-php5
     - vcs

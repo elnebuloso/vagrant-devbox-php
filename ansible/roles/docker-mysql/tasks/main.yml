@@ -1,0 +1,18 @@
+---
+- name: create volume directory for container
+  file: path=/opt/docker/mysql/conf.d state=directory recurse=yes
+
+- name: configure mysql from template
+  template: src=my.tpl dest=/opt/docker/mysql/conf.d/00-provision.cnf
+
+- name: install container
+  docker:
+    name: mysql
+    image: mysql
+    state: started
+    volumes:
+    - "/opt/docker/mysql/conf.d:/etc/mysql/conf.d"
+    ports:
+    - "3306:3306"
+    env:
+      MYSQL_ROOT_PASSWORD: welcome

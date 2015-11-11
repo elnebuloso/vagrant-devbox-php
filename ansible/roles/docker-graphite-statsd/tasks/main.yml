@@ -1,0 +1,22 @@
+---
+- name: install container
+  docker:
+    name: graphite
+    image: hopsoft/graphite-statsd
+    state: started
+    ports:
+    - "49153:80"
+    - "2003:2003"
+    - "8125:8125/udp"
+    - "8126:8126"
+
+- name: create apache2 site
+  template: src=vhost.conf dest=/etc/apache2/sites-available/49153-graphite.conf
+
+- name: enable apache2 sites
+  command: a2ensite 49153-graphite
+  args:
+    creates: /etc/apache2/sites-enabled/49153-graphite.conf
+
+- name: restart apache2
+  service: name=apache2 enabled=yes state=restarted

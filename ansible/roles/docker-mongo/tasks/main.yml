@@ -1,0 +1,8 @@
+---
+- name: install container
+  docker:
+    name: mongo
+    image: mongo
+    state: started
+    ports:
+    - "27017:27017"

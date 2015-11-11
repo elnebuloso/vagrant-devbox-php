@@ -33,5 +33,7 @@
     - php5
     - rewrite
     - vhost_alias
+    - proxy
+    - proxy_http
     - headers
   notify: webserver_restart_apache2

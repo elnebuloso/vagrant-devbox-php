@@ -1,0 +1,8 @@
+---
+- name: install container
+  docker:
+    name: memcached
+    image: memcached
+    state: started
+    ports:
+    - "11211:11211"
