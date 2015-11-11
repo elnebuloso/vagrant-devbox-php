@@ -13,7 +13,6 @@
     - docker-graphite-statsd
     - docker-ansible-semaphore
     - docker-mailcatcher
-    - docker-elasticsearch
     - vcs
     - composer
     - ci
