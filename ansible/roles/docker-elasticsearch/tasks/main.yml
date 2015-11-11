@@ -1,0 +1,22 @@
+---
+- name: create volume directory for container
+  file: path=/opt/docker/elasticsearch/config state=directory recurse=yes
+
+- name: install container elasticsearch
+  docker:
+    name: elasticsearch
+    image: elasticsearch
+    state: started
+    volumes:
+    - "/opt/docker/elasticsearch/config:/usr/share/elasticsearch/data"
+    ports:
+    - "9200:9200"
+    - "9300:9300"
+
+- name: install container elasticsearch-hq
+  docker:
+    name: elasticsearch
+    image: igortimoshenko/docker-elasticsearch-hq
+    state: started
+    ports:
+    - "9200:9200"
