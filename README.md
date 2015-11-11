@@ -2,9 +2,15 @@
 
 vagrant full stack php development box
 
+## provisioning
+
+* this box is provisioned through ansible
+* all configuration settings can be changed in ansible/vars/all.yml
+
 ## software
 
 * ubuntu 14.04 LTS
+* ansible
 * apache2
 * mysql
 * memcached
