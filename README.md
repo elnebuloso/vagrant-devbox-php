@@ -10,7 +10,7 @@
 ## connecting over ssh
 
 * box.entwickl.de:22
-* use the private key files generated in dot/ssh&vagrant
+* use the private key files generated in dot/ssh/vagrant
 * private keys are automatically generated
   * id_rsa
   * id_rsa.pub
