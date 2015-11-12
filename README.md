@@ -26,14 +26,6 @@ sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/playbook.yml
 
 * ubuntu 14.04 LTS
 * ansible
-* apache2
-* mysql
-* memcached
-* mongo
-* grafana
-* graphite
-* statsd
-* ansible semaphore
 
 ### apache2
 
@@ -42,26 +34,45 @@ sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/playbook.yml
 * each directory that has a public folder e.g. /var/www/foo/public/index.php
   * can be called e.g. http://foo.box.entwickl.de/
 
-### grafana
+### docker mysql
+
+* http://box.entwickl.de:3306
+* https://hub.docker.com/_/mysql/
+
+### docker mongo
+
+* http://box.entwickl.de:27017
+* https://hub.docker.com/_/mongo/
+
+### docker memcached
+
+* http://box.entwickl.de:11211
+* https://hub.docker.com/_/memcached/
+
+### docker grafana
 
 * available through apache2 proxy
 * http://grafana.box.entwickl.de/
 * http://box.entwickl.de:49152
+* https://hub.docker.com/r/grafana/grafana/
 
-### graphite
+### docker graphite + statsd
 
 * available through apache2 proxy
 * http://graphite.box.entwickl.de/
 * http://box.entwickl.de:49153
+* https://hub.docker.com/r/hopsoft/graphite-statsd/
 
-### ansible semaphore
+### docker ansible semaphore
 
 * available through apache2 proxy
 * http://semaphore.box.entwickl.de/
 * http://box.entwickl.de:49154
+* https://hub.docker.com/r/castawaylabs/semaphore/
 
-### mailcatcher
+### docker mailcatcher
 
 * available through apache2 proxy
 * http://mailcatcher.box.entwickl.de/
 * http://box.entwickl.de:1080
+* https://hub.docker.com/r/schickling/mailcatcher/
