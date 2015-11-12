@@ -8,15 +8,14 @@
     - php5-mongo
     - php5-imagick
     - php5-geoip
-    - php5-xdebug
     - php5-xhprof
     - php5-curl
     - php5-mcrypt
     - php5-json
     - php5-xsl
     - php5-sqlite
-    - php5-memcache
     - php5-memcached
+    - php5-xdebug
   notify:
     - webserver_php5enmod_mcrypt
     - webserver_php5enmod_xhprof
