@@ -1,6 +1,11 @@
 # vagrant-devbox-php
 
-* full stack php development box through vagrant and ansible
+full stack php development box through vagrant, ansible and docker
+
+## requirements
+
+* VirtualBox 5.0.10
+* Vagrant 1.7.4
 
 ## provisioning
 
