@@ -69,6 +69,9 @@ sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/playbook.yml
 * http://semaphore.box.entwickl.de/
 * http://box.entwickl.de:49154
 * https://hub.docker.com/r/castawaylabs/semaphore/
+  * Initial Login
+  * admin@semaphore.local
+  * CastawayLabs
 
 ### docker mailcatcher
 
