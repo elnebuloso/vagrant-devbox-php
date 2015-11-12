@@ -15,11 +15,12 @@ full stack php development box through vagrant, ansible and docker
 ## connecting over ssh
 
 * box.entwickl.de:22
-* use the private key files generated in dot/ssh/vagrant
-* private keys are automatically generated
+* provisioning will create automatically dot/ssh/vagrant folder with private and public keys
   * id_rsa
   * id_rsa.pub
   * id_rsa.ppk for putty pageant
+* if there is an existing folder dot/ssh/vagrant folder with private and public keys, then provisioning skips the creation
+  * you can put your created private and public keys in dot/ssh/vagrant, so they will be used
 
 ## running the ansible playbook over console
 
