@@ -16,3 +16,4 @@
     - vcs
     - composer
     - ci
+    - ci-compass
