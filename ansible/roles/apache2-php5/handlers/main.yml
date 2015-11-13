@@ -5,5 +5,11 @@
 - name: webserver_php5enmod_xhprof
   command: php5enmod xhprof
 
+- name: webserver_php5enmod_xhprof_repair_apache2
+  command: sed -i 's/^#/;/g' /etc/php5/apache2/conf.d/20-xhprof.ini
+
+- name: webserver_php5enmod_xhprof_repair_cli
+  command: sed -i 's/^#/;/g' /etc/php5/cli/conf.d/20-xhprof.ini
+
 - name: webserver_restart_apache2
   service: name=apache2 enabled=yes state=restarted

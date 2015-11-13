@@ -1,5 +1,5 @@
 ---
-- name: install
+- name: install php
   apt: pkg={{item}} state=present
   with_items:
     - php5
@@ -8,17 +8,28 @@
     - php5-mongo
     - php5-imagick
     - php5-geoip
-    - php5-xhprof
     - php5-curl
-    - php5-mcrypt
     - php5-json
     - php5-xsl
     - php5-sqlite
     - php5-memcached
     - php5-xdebug
+
+- name: install php mcrypt
+  apt: pkg={{item}} state=present
+  with_items:
+    - php5-mcrypt
   notify:
     - webserver_php5enmod_mcrypt
+
+- name: install php xhprof
+  apt: pkg={{item}} state=present
+  with_items:
+    - php5-xhprof
+  notify:
     - webserver_php5enmod_xhprof
+    - webserver_php5enmod_xhprof_repair_cli
+    - webserver_php5enmod_xhprof_repair_apache2
 
 - name: configure php5 apache2
   template: src=php5/apache2.tpl dest=/etc/php5/apache2/conf.d/00-provision.ini
