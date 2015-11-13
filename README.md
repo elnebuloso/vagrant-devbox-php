@@ -7,10 +7,11 @@ full stack php development box through vagrant, ansible and docker
 * VirtualBox 5.0.10
 * Vagrant 1.7.4
 
-## provisioning
+## configuration and provisioning
 
-* this box is provisioned through ansible
-* all configuration settings can be changed in ansible/vars/all.yml
+* copy box.yml.tpl as box.yml
+* the box.yml file is used by vagrant itself and ansible
+* edit the settings in box.yml to your needs
 
 ## connecting over ssh
 
