@@ -33,6 +33,9 @@ sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/playbook.yml
 
 * ubuntu 14.04 LTS
 * ansible
+* compass
+* composer
+* phing-commons
 
 ### apache2
 
@@ -86,3 +89,9 @@ sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/playbook.yml
 * http://mailcatcher.box.entwickl.de/
 * http://box.entwickl.de:1080
 * https://hub.docker.com/r/schickling/mailcatcher/
+
+### nodejs
+
+* https://nodejs.org
+* https://nodejs.org/en/download/
+* https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
