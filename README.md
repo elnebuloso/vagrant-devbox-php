@@ -26,7 +26,7 @@ full stack php development box through vagrant, ansible and docker
 ## running the ansible playbook over console
 
 ```
-sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/playbook.yml
+sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/install.yml
 ```
 
 ## features

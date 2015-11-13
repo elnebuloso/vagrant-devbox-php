@@ -1,0 +1,21 @@
+---
+- hosts: all
+  vars_files:
+    - /vagrant/box.yml
+  roles:
+    - {role: essentials,               tags: ["base", "full"]}
+    - {role: apache2-php5,             tags: ["base", "full"]}
+    - {role: docker,                   tags: ["base", "full"]}
+    - {role: docker-ansible-semaphore, tags: ["docker-ansible-semaphore", "full"]}
+    - {role: docker-grafana,           tags: ["docker-grafana", "full"]}
+    - {role: docker-graphite-statsd,   tags: ["docker-graphite-statsd", "full"]}
+    - {role: docker-mailcatcher,       tags: ["docker-mailcatcher", "full"]}
+    - {role: docker-memcached,         tags: ["docker-memcached", "full"]}
+    - {role: docker-mongo,             tags: ["docker-mongo", "full"]}
+    - {role: docker-mysql,             tags: ["docker-mysql", "full"]}
+    - {role: vcs,                      tags: ["base", "full"]}
+    - {role: composer,                 tags: ["base", "full"]}
+    - {role: composer-phing-commons,   tags: ["composer-phing-commons", "full"]}
+    - {role: ci,                       tags: ["base", "full"]}
+    - {role: ci-compass,               tags: ["ci-compass", "full"]}
+    - {role: nodejs,                   tags: ["base", "full"]}

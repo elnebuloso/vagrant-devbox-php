@@ -4,8 +4,9 @@
 
 - name: create list file
   apt_repository: repo='deb https://apt.dockerproject.org/repo ubuntu-trusty main' state=present
-  notify:
-    - docker_update_apt_cache
+
+- name: update apt cache
+  apt: update_cache=yes
 
 - name: install essential packages
   apt: pkg={{item}} state=present
