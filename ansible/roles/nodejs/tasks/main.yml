@@ -1,0 +1,6 @@
+---
+- name: install nodesource.list
+  script: install.sh creates=/etc/apt/sources.list.d/nodesource.list
+
+- name: install
+  apt: pkg=nodejs state=present
