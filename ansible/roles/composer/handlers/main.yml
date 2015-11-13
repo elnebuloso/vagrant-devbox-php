@@ -1,0 +1,3 @@
+---
+- name: composer_add_github_oauth_token
+  command: composer config -g github-oauth.github.com {{github_oauth_token}}

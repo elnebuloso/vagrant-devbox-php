@@ -1,3 +1,5 @@
 ---
 - name: install
   script: composer.sh creates=/usr/bin/composer
+  notify:
+    - composer_add_github_oauth_token
