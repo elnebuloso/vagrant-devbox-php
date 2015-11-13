@@ -1,0 +1,12 @@
+---
+- name: install
+  command: composer create-project elnebuloso/phing-commons /opt/vagrant/phing-commons creates=/opt/vagrant/phing-commons
+
+- name: install on path
+  template: src=phing-commons.sh dest=/etc/profile.d/phing-commons.sh
+
+- name: install root users phing-commons folder
+  file: path=/root/phing-commons state=directory recurse=yes
+
+- name: install root users build.properties
+  template: src=build.properties dest=/root/phing-commons/build.properties

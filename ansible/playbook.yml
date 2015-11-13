@@ -15,5 +15,6 @@
     - docker-mailcatcher
     - vcs
     - composer
+    - composer-phing-commons
     - ci
     - ci-compass
