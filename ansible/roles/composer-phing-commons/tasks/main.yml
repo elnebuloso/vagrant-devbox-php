@@ -8,5 +8,13 @@
 - name: install root users phing-commons folder
   file: path=/root/phing-commons state=directory recurse=yes
 
-- name: install root users build.properties
+- stat: path=/vagrant/files/phing-commons/build.properties
+  register: phing_commons_root_properties
+
+- name: install default root users build.properties
   template: src=build.properties dest=/root/phing-commons/build.properties
+  when: phing_commons_root_properties.stat.exists == False
+
+- name: install defined root users build.properties
+  template: src=/vagrant/files/phing-commons/build.properties dest=/root/phing-commons/build.properties
+  when: phing_commons_root_properties.stat.exists == True
