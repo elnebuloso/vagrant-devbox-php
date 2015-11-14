@@ -7,8 +7,8 @@ setting = YAML.load_file "box.yml"
 
 Vagrant.configure(2) do |config|
     config.vm.provider "virtualbox" do |v|
-      v.memory = 4096
-      v.cpus = 4
+        v.memory = 4096
+        v.cpus = 4
     end
 
     config.vm.box = "bento/ubuntu-14.04"
@@ -19,10 +19,10 @@ Vagrant.configure(2) do |config|
 
     config.vm.provision "shell", path: "provision/001-keys.sh"
     config.vm.provision "shell", path: "provision/002-ansible.sh"
-    config.vm.provision "shell", inline: "sudo PYTHONUNBUFFERED=1 ansible-playbook -i \"localhost,\" -c local /vagrant/ansible/install.yml"
+    config.vm.provision "shell", inline: "sudo PYTHONUNBUFFERED=1 ansible-playbook -i \"localhost,\" -c local /vagrant/ansible/install.yml -t base"
 
-    setting['ansible_optional_roles'].each do |i|
-        config.vm.provision "shell", inline: "sudo PYTHONUNBUFFERED=1 ansible-playbook -i \"localhost,\" -c local /vagrant/ansible/install.yml -t {i}"
+    setting['ansible_optional_roles'].each do |role|
+        config.vm.provision "shell", inline: "sudo PYTHONUNBUFFERED=1 ansible-playbook -i \"localhost,\" -c local /vagrant/ansible/install.yml -t #{role}"
     end
 
     setting['vagrant_synced_folders'].each do |i|
