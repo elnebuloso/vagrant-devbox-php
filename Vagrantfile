@@ -21,6 +21,10 @@ Vagrant.configure(2) do |config|
     config.vm.provision "shell", path: "provision/002-ansible.sh"
     config.vm.provision "shell", inline: "sudo PYTHONUNBUFFERED=1 ansible-playbook -i \"localhost,\" -c local /vagrant/ansible/install.yml"
 
+    setting['ansible_optional_roles'].each do |i|
+        config.vm.provision "shell", inline: "sudo PYTHONUNBUFFERED=1 ansible-playbook -i \"localhost,\" -c local /vagrant/ansible/install.yml -t {i}"
+    end
+
     setting['vagrant_synced_folders'].each do |i|
         config.vm.synced_folder i['host'], i['guest']
     end

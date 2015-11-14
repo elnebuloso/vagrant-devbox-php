@@ -1,0 +1,3 @@
+---
+- name: install
+  npm: name=grunt-cli global=yes

@@ -25,8 +25,24 @@ full stack php development box through vagrant, ansible and docker
 
 ## running the ansible playbook over console
 
+* you don't have to do this, vagrant provisioning does this for you
+* you can define the roles to run in box.yml configuration file
+* configuring through ansible_optional_roles
+
+### examples
+
 ```
-sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/install.yml
+# running base roles
+sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/install.yml -t base
+
+# running all available roles
+sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/install.yml -t full
+
+# running docker roles
+sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/install.yml -t docker
+
+# running docker roles
+sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/install.yml -t docker,docker-grafana,docker-memcached
 ```
 
 ## features
