@@ -6,7 +6,7 @@
     state: started
     ports:
     - "1080:1080"
-    - "25:1025"
+    - "1025:1025"
 
 - name: create apache2 sites
   template: src=vhost.conf dest=/etc/apache2/sites-available/100-mailcatcher.conf
