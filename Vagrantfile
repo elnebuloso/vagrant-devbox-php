@@ -6,11 +6,6 @@ require "yaml"
 setting = YAML.load_file "box.yml"
 
 Vagrant.configure(2) do |config|
-    config.vm.provider "virtualbox" do |v|
-        v.memory = 4096
-        v.cpus = 4
-    end
-
     config.vm.box = "bento/ubuntu-14.04"
     config.vm.hostname = "box.entwickl.de"
 

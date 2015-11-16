@@ -11,10 +11,10 @@
     - "8126:8126"
 
 - name: create apache2 sites
-  template: src=vhost.conf dest=/etc/apache2/sites-available/49153-graphite.conf
+  template: src=vhost.conf dest=/etc/apache2/sites-available/100-graphite.conf
 
 - name: enable apache2 sites
-  command: a2ensite 49153-graphite
+  command: a2ensite 100-graphite
   args:
     creates: /etc/apache2/sites-enabled/49153-graphite.conf
   notify: webserver_restart_apache2

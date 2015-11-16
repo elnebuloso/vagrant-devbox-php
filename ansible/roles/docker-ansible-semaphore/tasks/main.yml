@@ -26,10 +26,10 @@
       REDIS_HOST: redis
 
 - name: create apache2 sites
-  template: src=vhost.conf dest=/etc/apache2/sites-available/49154-semaphore.conf
+  template: src=vhost.conf dest=/etc/apache2/sites-available/100-ansible-semaphore.conf
 
 - name: enable apache2 sites
-  command: a2ensite 49154-semaphore
+  command: a2ensite 100-ansible-semaphore
   args:
     creates: /etc/apache2/sites-enabled/49154-semaphore.conf
   notify: webserver_restart_apache2

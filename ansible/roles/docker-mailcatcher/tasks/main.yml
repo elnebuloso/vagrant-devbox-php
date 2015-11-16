@@ -9,10 +9,10 @@
     - "1025:1025"
 
 - name: create apache2 sites
-  template: src=vhost.conf dest=/etc/apache2/sites-available/1080-mailcatcher.conf
+  template: src=vhost.conf dest=/etc/apache2/sites-available/100-mailcatcher.conf
 
 - name: enable apache2 sites
-  command: a2ensite 1080-mailcatcher
+  command: a2ensite 100-mailcatcher
   args:
     creates: /etc/apache2/sites-enabled/1080-mailcatcher.conf
   notify: webserver_restart_apache2
