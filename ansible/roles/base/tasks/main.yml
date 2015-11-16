@@ -31,3 +31,10 @@
     - software-properties-common
     - python-passlib
     - python-pip
+    - nullmailer
+
+- name: create mailname
+  template: src=mailname.tpl dest=/etc/mailname
+
+- name: create nullmailer remotes
+  template: src=nullmailer/remotes.tpl dest=/etc/nullmailer/remotes
