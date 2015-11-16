@@ -31,4 +31,3 @@
     - software-properties-common
     - python-passlib
     - python-pip
-    - sendmail
