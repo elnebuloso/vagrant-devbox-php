@@ -11,7 +11,7 @@ Vagrant.configure(2) do |config|
     config.vm.hostname = "box.entwickl.de"
 
     config.vm.network "private_network", ip: "192.168.33.100"
-    config.vm.network "public_network", ip: "192.168.178.100"
+    config.vm.network "public_network", ip: "192.168.178.100", bridge: "Realtek PCIe GBE Family Controller"
 
     config.vm.provision "shell", path: "provision/001-keys.sh"
     config.vm.provision "shell", path: "provision/002-ansible.sh"
