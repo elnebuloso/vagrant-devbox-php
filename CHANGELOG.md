@@ -1,5 +1,9 @@
 # changelog
 
+## 1.3.0
+
+* update composer-phing-commons to 8.10.0
+
 ## 1.2.0
 
 * removed public_network settings from Vagrantfile

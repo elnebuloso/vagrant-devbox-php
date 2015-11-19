@@ -3,7 +3,7 @@
   file: path=/opt/vagrant/phing-commons state=directory recurse=yes
 
 - name: install
-  command: tar xfz /vagrant/files/phing-commons/releases/phing-commons-8.9.1.tar.gz -C /opt/vagrant/phing-commons
+  command: tar xfz /vagrant/files/phing-commons/releases/phing-commons-8.10.0.tar.gz -C /opt/vagrant/phing-commons
   args:
     creates: /opt/vagrant/phing-commons/VERSION
 
