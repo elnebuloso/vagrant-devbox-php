@@ -1,5 +1,10 @@
 # changelog
 
+## 1.2.0
+
+* removed public_network settings from Vagrantfile
+* update dependencies of composer-phing-commons
+
 ## 1.1.0
 
 * added sendmail to essential installation

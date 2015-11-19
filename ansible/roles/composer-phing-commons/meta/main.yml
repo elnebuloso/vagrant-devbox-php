@@ -1,3 +1,5 @@
 ---
 dependencies:
+  - { role: ci }
+  - { role: vcs }
   - { role: composer }
