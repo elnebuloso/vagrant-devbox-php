@@ -1,5 +1,10 @@
 # changelog
 
+## 1.5.0
+
+* apache2 site for builds matched on vagrant_synced_folders /var/builds
+* apache2 site for releases matched on vagrant_synced_folders /var/releases
+
 ## 1.4.0
 
 * update composer-phing-commons to 8.11.0
