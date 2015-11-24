@@ -38,7 +38,7 @@ sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/install.yml
 
 * ubuntu 14.04 LTS
 * apache2
-* php5.5
+* php 5.5
 * ansible
 * compass
 * composer
