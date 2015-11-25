@@ -1,5 +1,9 @@
 # changelog
 
+## 1.8.0
+
+* update composer-phing-commons to 9.2.0
+
 ## 1.7.0
 
 * update composer-phing-commons to 9.1.0
