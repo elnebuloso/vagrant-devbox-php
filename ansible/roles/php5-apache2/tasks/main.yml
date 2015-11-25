@@ -3,17 +3,17 @@
   apt: pkg={{item}} state=present
   with_items:
     - php5
-    - php5-mysql
     - php5-apcu
-    - php5-mongo
-    - php5-imagick
-    - php5-geoip
     - php5-curl
+    - php5-geoip
+    - php5-imagick
     - php5-json
-    - php5-xsl
-    - php5-sqlite
     - php5-memcached
+    - php5-mongo
+    - php5-mysql
+    - php5-sqlite
     - php5-xdebug
+    - php5-xsl
 
 - name: install php mcrypt
   apt: pkg={{item}} state=present
