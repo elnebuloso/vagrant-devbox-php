@@ -3,6 +3,7 @@
 ## 1.7.0
 
 * update composer-phing-commons to 9.1.0
+* update to php 5.6
 
 ## 1.6.0
 

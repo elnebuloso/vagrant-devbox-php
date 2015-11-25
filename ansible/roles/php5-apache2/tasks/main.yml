@@ -1,4 +1,10 @@
 ---
+- name: add ppa repository for php 5.6
+  apt_repository: repo='ppa:ondrej/php5-5.6' state=present
+
+- name: update apt cache
+  apt: update_cache=yes
+
 - name: install php
   apt: pkg={{item}} state=present
   with_items:
@@ -7,29 +13,13 @@
     - php5-curl
     - php5-geoip
     - php5-imagick
-    - php5-json
+    - php5-mcrypt
     - php5-memcached
     - php5-mongo
     - php5-mysql
     - php5-sqlite
     - php5-xdebug
     - php5-xsl
-
-- name: install php mcrypt
-  apt: pkg={{item}} state=present
-  with_items:
-    - php5-mcrypt
-  notify:
-    - webserver_php5enmod_mcrypt
-
-- name: install php xhprof
-  apt: pkg={{item}} state=present
-  with_items:
-    - php5-xhprof
-  notify:
-    - webserver_php5enmod_xhprof
-    - webserver_php5enmod_xhprof_repair_cli
-    - webserver_php5enmod_xhprof_repair_apache2
 
 - name: configure php5 apache2
   template: src=php5/apache2.tpl dest=/etc/php5/apache2/conf.d/00-provision.ini
