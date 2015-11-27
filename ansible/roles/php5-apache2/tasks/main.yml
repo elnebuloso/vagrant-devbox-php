@@ -27,6 +27,9 @@
 - name: configure php5 cli
   template: src=php5/cli.tpl dest=/etc/php5/cli/conf.d/00-provision.ini
 
+- name: remove default html folder
+  file: path=/var/www/html state=absent
+
 - name: configure apache2 modules
   apache2_module: state=present name={{item}}
   with_items:

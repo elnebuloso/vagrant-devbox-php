@@ -1,5 +1,9 @@
 # changelog
 
+## 1.8.1
+
+- removed default apache2 site /var/www/html
+
 ## 1.8.0
 
 * update composer-phing-commons to 9.2.0
