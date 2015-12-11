@@ -9,6 +9,11 @@
   apt: pkg={{item}} state=present
   with_items:
     - php
+    - php-imagick
+    - php-memcached
+    - php-mysql
+    - php-sqlite3
+    - php-xdebug
 
 - name: configure php5 apache2
   template: src=php/apache2.tpl dest=/etc/php/7.0/apache2/conf.d/00-provision.ini
