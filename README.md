@@ -102,3 +102,14 @@ sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/install.yml
 * https://nodejs.org
 * https://nodejs.org/en/download/
 * https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
+
+### todo
+
+php7 packages
+
+    - php-apcu
+    - php-curl
+    - php-imagick
+    - php-memcached
+    - php-mysql
+    - php-xdebug
