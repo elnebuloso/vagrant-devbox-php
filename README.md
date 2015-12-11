@@ -38,13 +38,15 @@ sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/install.yml
 
 * ubuntu 14.04 LTS
 * apache2
-* php 5.6
+* php 5.6 + apache2
+* php 5.6 + nginx
+* php 7 + apache2 (experimental)
 * ansible
 * compass
 * composer
 * phing-commons
 
-### apache2
+### virtual docroots (apache2, nginx)
 
 * http://box.entwickl.de/
 * Virtual Document Roots under /var/www/**
@@ -102,14 +104,3 @@ sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/install.yml
 * https://nodejs.org
 * https://nodejs.org/en/download/
 * https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
-
-### todo
-
-php7 packages
-
-    - php-apcu
-    - php-curl
-    - php-imagick
-    - php-memcached
-    - php-mysql
-    - php-xdebug

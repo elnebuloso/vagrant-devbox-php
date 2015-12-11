@@ -20,5 +20,7 @@
     - nodejs
     - nodejs-npm-bower
     - nodejs-npm-grunt
+    - php5-nginx
     - php5-apache2
+    - php7-apache2
     - vcs
