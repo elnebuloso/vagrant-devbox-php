@@ -6,6 +6,8 @@ full stack php development box through vagrant, ansible and docker
 
 * VirtualBox 5.0.10
 * Vagrant 1.7.4
+* vagrant plugin install vagrant-vbguest
+* vagrant plugin install vagrant-hostmanager
 
 ## configuration and provisioning
 
@@ -104,3 +106,7 @@ sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/install.yml
 * https://nodejs.org
 * https://nodejs.org/en/download/
 * https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
+
+## links
+
+* https://developerkarma.com/post/2014/vagrant-tricks/
