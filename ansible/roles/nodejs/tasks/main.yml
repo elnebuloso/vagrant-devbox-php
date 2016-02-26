@@ -4,6 +4,3 @@
 
 - name: install
   apt: pkg=nodejs state=present
-
-- name: update npm to latest
-  npm: name=npm global=yes state=latest

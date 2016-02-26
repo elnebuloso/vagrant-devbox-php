@@ -4,9 +4,6 @@
   with_items:
     - php5
 
-- name: remove apache2 default html folder
-  file: path=/var/www/html state=absent
-
 - name: configure php5 apache2
   template: src=php/apache2.tpl dest=/etc/php5/apache2/conf.d/00-provision.ini
   notify: base_apache2_restart

@@ -31,9 +31,20 @@
     - nullmailer
     - git
     - subversion
+    - apache2
 
 - name: create mailname
   template: src=mailname.tpl dest=/etc/mailname
 
 - name: create nullmailer remotes
   template: src=nullmailer/remotes.tpl dest=/etc/nullmailer/remotes
+
+- name: remove apache2 default html folder
+  file: path=/var/www/html state=absent
+
+- name: configure apache2 modules
+  apache2_module: state=present name={{item}}
+  with_items:
+    - proxy
+    - proxy_http
+  notify: base_apache2_restart

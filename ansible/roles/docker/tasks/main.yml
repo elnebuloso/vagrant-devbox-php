@@ -17,18 +17,3 @@
   apt: pkg={{item}} state=present update_cache=yes cache_valid_time=3600
   with_items:
     - docker-engine
-
-- name: install apache2 packages
-  apt: pkg={{item}} state=present update_cache=yes cache_valid_time=3600
-  with_items:
-    - apache2
-
-- name: remove apache2 default html folder
-  file: path=/var/www/html state=absent
-
-- name: configure apache2 modules
-  apache2_module: state=present name={{item}}
-  with_items:
-    - proxy
-    - proxy_http
-  notify: base_apache2_restart

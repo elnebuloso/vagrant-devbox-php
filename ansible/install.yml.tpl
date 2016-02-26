@@ -19,3 +19,6 @@
     - docker-memcached
     - docker-mongo
     - docker-mysql
+    - nodejs
+    - nodejs-npm-bower
+    - nodejs-npm-grunt-cli
