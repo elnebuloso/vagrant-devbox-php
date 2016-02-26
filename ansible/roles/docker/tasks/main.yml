@@ -2,14 +2,11 @@
 - name: install public key
   apt_key: keyserver=hkp://pgp.mit.edu:80 id=58118E89F3A912897C070ADBF76221572C52609D
 
-- name: create list file
+- name: add apt repository
   apt_repository: repo='deb https://apt.dockerproject.org/repo ubuntu-trusty main' state=present
 
-- name: update apt cache
-  apt: update_cache=yes
-
 - name: install essential packages
-  apt: pkg={{item}} state=present
+  apt: pkg={{item}} state=present update_cache=yes cache_valid_time=3600
   with_items:
     - python-pip
 
@@ -17,6 +14,21 @@
   pip: name=docker-py
 
 - name: install docker-engine
-  apt: pkg={{item}} state=present
+  apt: pkg={{item}} state=present update_cache=yes cache_valid_time=3600
   with_items:
     - docker-engine
+
+- name: install apache2 packages
+  apt: pkg={{item}} state=present update_cache=yes cache_valid_time=3600
+  with_items:
+    - apache2
+
+- name: remove apache2 default html folder
+  file: path=/var/www/html state=absent
+
+- name: configure apache2 modules
+  apache2_module: state=present name={{item}}
+  with_items:
+    - proxy
+    - proxy_http
+  notify: base_apache2_restart

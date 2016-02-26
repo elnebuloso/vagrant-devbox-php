@@ -9,10 +9,11 @@
     - "1025:1025"
 
 - name: create apache2 sites
-  template: src=vhost.conf dest=/etc/apache2/sites-available/100-mailcatcher.conf
+  template: src=vhost.conf dest=/etc/apache2/sites-available/100-docker-mailcatcher.conf
+  notify: base_apache2_restart
 
 - name: enable apache2 sites
-  command: a2ensite 100-mailcatcher
+  command: a2ensite 100-docker-mailcatcher
   args:
-    creates: /etc/apache2/sites-enabled/1080-mailcatcher.conf
-  notify: webserver_restart_apache2
+    creates: /etc/apache2/sites-enabled/100-docker-mailcatcher.conf
+  notify: base_apache2_restart

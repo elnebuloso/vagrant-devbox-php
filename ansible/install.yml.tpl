@@ -7,6 +7,8 @@
     - base
     - ci
     - ci-compass
+    - php5
+    - php5-apache2
     - composer
     - composer-phing-commons
     - docker
@@ -17,10 +19,3 @@
     - docker-memcached
     - docker-mongo
     - docker-mysql
-    - nodejs
-    - nodejs-npm-bower
-    - nodejs-npm-grunt
-    - php5-nginx
-    - php5-apache2
-    - php7-apache2
-    - vcs

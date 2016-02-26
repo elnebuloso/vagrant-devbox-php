@@ -1,4 +1,0 @@
----
-dependencies:
-  - { role: docker }
-  - { role: php5-apache2 }

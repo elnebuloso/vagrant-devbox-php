@@ -1,9 +1,9 @@
 ---
-- name: add ppa repository for php 5.6
+- name: add php5 repository
   apt_repository: repo='ppa:ondrej/php5-5.6' state=present
 
 - name: install php5
-  apt: pkg={{item}} state=present
+  apt: pkg={{item}} state=present update_cache=yes cache_valid_time=3600
   with_items:
     - php5-cli
     - php5-curl

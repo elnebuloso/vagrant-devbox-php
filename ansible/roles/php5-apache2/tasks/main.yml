@@ -1,45 +1,24 @@
 ---
-- name: add ppa repository for php 5.6
-  apt_repository: repo='ppa:ondrej/php5-5.6' state=present
-
-- name: update apt cache
-  apt: update_cache=yes
-
-- name: install php
-  apt: pkg={{item}} state=present
+- name: install php5 apache2
+  apt: pkg={{item}} state=present update_cache=yes cache_valid_time=3600
   with_items:
     - php5
-    - php5-apcu
-    - php5-curl
-    - php5-geoip
-    - php5-imagick
-    - php5-mcrypt
-    - php5-memcached
-    - php5-mongo
-    - php5-mysql
-    - php5-sqlite
-    - php5-xdebug
-    - php5-xsl
+
+- name: remove apache2 default html folder
+  file: path=/var/www/html state=absent
 
 - name: configure php5 apache2
   template: src=php/apache2.tpl dest=/etc/php5/apache2/conf.d/00-provision.ini
-
-- name: configure php5 cli
-  template: src=php/cli.tpl dest=/etc/php5/cli/conf.d/00-provision.ini
-
-- name: remove default html folder
-  file: path=/var/www/html state=absent
+  notify: base_apache2_restart
 
 - name: configure apache2 modules
   apache2_module: state=present name={{item}}
   with_items:
     - php5
     - rewrite
-    - vhost_alias
     - headers
-    - proxy
-    - proxy_http
-  notify: webserver_restart_apache2
+    - vhost_alias
+  notify: base_apache2_restart
 
 - name: create apache2 sites
   template: src=sites/{{item}}.conf dest=/etc/apache2/sites-available/{{item}}.conf
@@ -48,6 +27,7 @@
     - 001-builds
     - 002-releases
     - 1000-dynamic-hosts
+  notify: base_apache2_restart
 
 - name: enable apache2 sites
   command: a2ensite {{item}}
@@ -58,4 +38,4 @@
     - 001-builds
     - 002-releases
     - 1000-dynamic-hosts
-  notify: webserver_restart_apache2
+  notify: base_apache2_restart
