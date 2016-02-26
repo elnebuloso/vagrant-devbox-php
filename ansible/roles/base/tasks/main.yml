@@ -1,27 +1,24 @@
 ---
-- name: update apt cache
-  apt: update_cache=yes
-
 - name: configure the aliases
   template: src=alias.tpl dest=/root/.bash_aliases
 
 - name: configure the timezone
   template: src=timezone.tpl dest=/etc/timezone
-  notify: essentials_update_timezone
+  notify: base_update_timezone
 
 - locale_gen: name=de_DE state=present
 - locale_gen: name=de_DE@euro state=present
 - locale_gen: name=de_DE.UTF-8 state=present
 
 - name: install ntp services
-  apt: pkg={{item}} state=present
+  apt: pkg={{item}} state=present update_cache=yes cache_valid_time=3600
   with_items:
     - ntp
     - ntpdate
-  notify: essentials_update_ntp
+  notify: base_update_ntp
 
 - name: install packages
-  apt: pkg={{item}} state=present
+  apt: pkg={{item}} state=present update_cache=yes cache_valid_time=3600
   with_items:
     - nano
     - htop
@@ -32,6 +29,8 @@
     - python-passlib
     - python-pip
     - nullmailer
+    - git
+    - subversion
 
 - name: create mailname
   template: src=mailname.tpl dest=/etc/mailname

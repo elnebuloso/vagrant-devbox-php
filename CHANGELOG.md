@@ -1,8 +1,16 @@
 # changelog
 
-## 1.8.1
+## 1.9.0
 
 - removed default apache2 site /var/www/html
+- removed meta folders from ansible packages
+- split php5-apache2 ansible package into php5
+- split php5-apache2 ansible package into webserver
+- split php5-apache2 ansible package into webserver-php5
+- removed ansible package vcs, dependencies moved to base
+- updated composer installer
+- updated composer-phing-commons installation
+- added ansible/config folder for user defined settings
 
 ## 1.8.0
 

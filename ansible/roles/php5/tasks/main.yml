@@ -1,0 +1,21 @@
+---
+- name: add ppa repository for php 5.6
+  apt_repository: repo='ppa:ondrej/php5-5.6' state=present
+
+- name: install php5
+  apt: pkg={{item}} state=present
+  with_items:
+    - php5-cli
+    - php5-curl
+    - php5-geoip
+    - php5-imagick
+    - php5-mcrypt
+    - php5-memcached
+    - php5-mongo
+    - php5-mysql
+    - php5-sqlite
+    - php5-xdebug
+    - php5-xsl
+
+- name: configure php5 cli
+  template: src=php/cli.tpl dest=/etc/php5/cli/conf.d/00-provision.ini

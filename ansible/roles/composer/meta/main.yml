@@ -1,5 +1,0 @@
----
-dependencies:
-  - { role: base }
-  - { role: php5-apache2 }
-  - { role: vcs }
