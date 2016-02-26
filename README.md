@@ -68,6 +68,14 @@ sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/install.yml
 * http://box.entwickl.de:11211
 * https://hub.docker.com/_/memcached/
 
+### docker jenkins (experimental)
+
+* still under construction, based on official docker image, same php5 installation as this development box
+* available through apache2 proxy
+* http://jenkins.box.entwickl.de/
+* http://box.entwickl.de:8080
+* https://hub.docker.com/_/jenkins/
+
 ### docker grafana
 
 * available through apache2 proxy

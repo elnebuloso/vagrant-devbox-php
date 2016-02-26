@@ -1,19 +1,24 @@
 ---
+- name: create image
+  docker_image: path="/vagrant/files/docker-jenkins" name="my/jenkins" state=present
+
 - name: install container
   docker:
     name: jenkins
-    image: jenkins
+    image: my/jenkins
     state: started
     ports:
     - "8080:8080"
     - "50000:50000"
+    volumes:
+    - "/var/jenkins:/var/jenkins_home"
 
 - name: create apache2 sites
-  template: src=vhost.conf dest=/etc/apache2/sites-available/100-docker-grafana.conf
+  template: src=vhost.conf dest=/etc/apache2/sites-available/100-docker-jenkins.conf
   notify: base_apache2_restart
 
 - name: enable apache2 sites
-  command: a2ensite 100-docker-grafana
+  command: a2ensite 100-docker-jenkins.conf
   args:
-    creates: /etc/apache2/sites-enabled/100-docker-grafana.conf
+    creates: /etc/apache2/sites-enabled/100-docker-jenkins.conf
   notify: base_apache2_restart
