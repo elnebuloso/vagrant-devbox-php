@@ -54,3 +54,17 @@
     - managed-scripts
     - publish-over-ssh
   notify: base_jenkins_restart
+
+- name: install jenkins users phing-commons folder
+  file: path=/var/lib/jenkins/phing-commons state=directory recurse=yes
+
+- stat: path=/vagrant/ansible/config/phing-commons/build.properties
+  register: phing_commons_root_properties
+
+- name: install default jenkins users build.properties
+  template: src=build.properties dest=/var/lib/jenkins/phing-commons/build.properties owner=jenkins group=jenkins
+  when: phing_commons_root_properties.stat.exists == False
+
+- name: install defined jenkins users build.properties from ansible config
+  template: src=/vagrant/ansible/config/phing-commons/build.properties dest=/var/lib/jenkins/phing-commons/build.properties owner=jenkins group=jenkins
+  when: phing_commons_root_properties.stat.exists == True
