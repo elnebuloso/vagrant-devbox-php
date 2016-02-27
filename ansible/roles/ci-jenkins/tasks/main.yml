@@ -26,4 +26,3 @@
     - base_apache2_restart
 
 - include: mounts.yml
-- include: plugins.yml

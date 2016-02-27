@@ -15,8 +15,8 @@ Vagrant.configure(2) do |config|
       v.cpus = setting['vbox_cpus']
     end
 
-    # config.vbguest.auto_update = false
-    # config.vbguest.no_remote = true
+    config.vbguest.auto_update = false
+    config.vbguest.no_remote = true
 
     # config.hostmanager.enabled = false
     # config.hostmanager.manage_host = false
