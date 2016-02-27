@@ -25,5 +25,6 @@
     - ws-cleanup
     - managed-scripts
     - publish-over-ssh
+    - categorized-view
   notify:
     - base_jenkins_restart
