@@ -6,6 +6,9 @@ full stack php development box through vagrant, ansible and docker
 
 * VirtualBox 5.0.14
 * Vagrant 1.8.1
+
+### optional vagrant plugins
+
 * vagrant plugin install vagrant-vbguest
 * vagrant plugin install vagrant-hostmanager
 
@@ -46,7 +49,7 @@ sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/install.yml
 * composer
 * phing-commons
 
-### virtual docroots (apache2, nginx)
+### virtual docroots (apache2)
 
 * http://box.entwickl.de/
 * Virtual Document Roots under /var/www/**
