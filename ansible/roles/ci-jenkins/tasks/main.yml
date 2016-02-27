@@ -1,4 +1,6 @@
 ---
+- include: mounts.yml
+
 - name: install essential packages
   apt: pkg={{item}} state=present update_cache=yes cache_valid_time=3600
   with_items:
@@ -25,31 +27,4 @@
   notify:
     - base_apache2_restart
 
-- name: download current jenkins-cli.jar to install packages
-  get_url: url=http://127.0.0.1:8080/jnlpJars/jenkins-cli.jar dest=/tmp/jenkins-cli.jar
-
-- name: install optional plugins
-  command: java -jar /tmp/jenkins-cli.jar -s http://127.0.0.1:8080/ install-plugin {{item}} creates=/var/lib/jenkins/plugins/{{item}}.jpi
-  with_items:
-    - thinBackup
-    - configure-job-column-plugin
-    - compact-columns
-    - sectioned-view
-    - timestamper
-    - copyartifact
-    - ansible
-    - git
-    - clover
-    - checkstyle
-    - cron_column
-    - greenballs
-    - bulk-builder
-    - build-pipeline-plugin
-    - phing
-    - analysis-collector
-    - extensible-choice-parameter
-    - ws-cleanup
-    - managed-scripts
-    - publish-over-ssh
-  notify:
-    - base_jenkins_restart
+- include: plugins.yml

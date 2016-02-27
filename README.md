@@ -63,6 +63,8 @@ sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/install.yml
 * available through apache2 proxy
 * http://jenkins.box.entwickl.de/
 * http://box.entwickl.de:8080
+  * include mounts.yml to mount jenkins directories outside the vagrant box to keep jenkins after new box provisioning
+  * include plugins.yml to install plugins
 
 ### docker mysql
 

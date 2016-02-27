@@ -1,0 +1,6 @@
+---
+- name: mount jenkins
+  action: mount name=/var/lib/jenkins src=nas.fritz.box:/jenkins fstype=nfs state=mounted opts=uid=jenkins,gid=jenkins
+
+- name: mount jenkins thin-backup
+  action: mount name=/var/lib/jenkins-thin-backup src=nas.fritz.box:/jenkins-thin-backup fstype=nfs state=mounted opts=uid=jenkins,gid=jenkins
