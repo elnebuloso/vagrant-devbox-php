@@ -53,3 +53,4 @@
     - ws-cleanup
     - managed-scripts
     - publish-over-ssh
+  notify: base_jenkins_restart

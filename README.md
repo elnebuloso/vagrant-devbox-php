@@ -48,6 +48,8 @@ sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/install.yml
 * compass
 * composer
 * phing-commons
+* jenkins
+* docker
 
 ### virtual docroots (apache2)
 
@@ -55,6 +57,12 @@ sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/install.yml
 * Virtual Document Roots under /var/www/**
 * each directory that has a public folder e.g. /var/www/foo/public/index.php
   * can be called e.g. http://foo.box.entwickl.de/
+
+### jenkins
+
+* available through apache2 proxy
+* http://jenkins.box.entwickl.de/
+* http://box.entwickl.de:8080
 
 ### docker mysql
 
@@ -70,14 +78,6 @@ sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/install.yml
 
 * http://box.entwickl.de:11211
 * https://hub.docker.com/_/memcached/
-
-### docker jenkins (experimental)
-
-* still under construction, based on official docker image, same php5 installation as this development box
-* available through apache2 proxy
-* http://jenkins.box.entwickl.de/
-* http://box.entwickl.de:8080
-* https://hub.docker.com/_/jenkins/
 
 ### docker grafana
 

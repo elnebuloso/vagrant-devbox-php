@@ -7,3 +7,6 @@
 
 - name: base_apache2_restart
   service: name=apache2 enabled=yes state=restarted
+
+- name: base_jenkins_restart
+  service: name=jenkins enabled=yes state=restarted
