@@ -10,6 +10,11 @@ Vagrant.configure(2) do |config|
     config.vm.box = "bento/ubuntu-14.04"
     config.vm.hostname = "box.entwickl.de"
 
+    config.vm.provider "virtualbox" do |v|
+      v.memory = 2048
+      v.cpus = 2
+    end
+
     # config.vbguest.auto_update = false
     # config.vbguest.no_remote = true
 
