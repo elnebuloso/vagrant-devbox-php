@@ -11,8 +11,8 @@
     image: mysql
     state: started
     volumes:
-    - "/opt/docker/mysql/conf.d:/etc/mysql/conf.d"
+      - "/opt/docker/mysql/conf.d:/etc/mysql/conf.d"
     ports:
-    - "3306:3306"
+      - "3306:3306"
     env:
       MYSQL_ROOT_PASSWORD: welcome

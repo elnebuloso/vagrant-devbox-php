@@ -14,25 +14,22 @@
   apt: pkg={{item}} state=present update_cache=yes cache_valid_time=3600
   with_items:
     - jenkins
-  notify: base_composer_add_github_oauth_token
 
 - name: create apache2 sites
   template: src=vhost.conf dest=/etc/apache2/sites-available/100-ci-jenkins.conf
-  notify: base_apache2_restart
+  notify:
+    - base_apache2_restart
 
 - name: enable apache2 sites
-  command: a2ensite 100-ci-jenkins.conf
-  args:
-    creates: /etc/apache2/sites-enabled/100-ci-jenkins.conf
-  notify: base_apache2_restart
+  command: a2ensite 100-ci-jenkins.conf creates=/etc/apache2/sites-enabled/100-ci-jenkins.conf
+  notify:
+    - base_apache2_restart
 
 - name: download current jenkins-cli.jar to install packages
   get_url: url=http://127.0.0.1:8080/jnlpJars/jenkins-cli.jar dest=/tmp/jenkins-cli.jar
 
 - name: install optional plugins
-  command: java -jar /tmp/jenkins-cli.jar -s http://127.0.0.1:8080/ install-plugin {{item}}
-  args:
-    creates: /var/lib/jenkins/plugins/{{item}}.jpi
+  command: java -jar /tmp/jenkins-cli.jar -s http://127.0.0.1:8080/ install-plugin {{item}} creates=/var/lib/jenkins/plugins/{{item}}.jpi
   with_items:
     - thinBackup
     - configure-job-column-plugin
@@ -54,18 +51,5 @@
     - ws-cleanup
     - managed-scripts
     - publish-over-ssh
-  notify: base_jenkins_restart
-
-- name: install jenkins users phing-commons folder
-  file: path=/var/lib/jenkins/phing-commons state=directory recurse=yes
-
-- stat: path=/vagrant/ansible/config/phing-commons/build.properties
-  register: phing_commons_root_properties
-
-- name: install default jenkins users build.properties
-  template: src=build.properties dest=/var/lib/jenkins/phing-commons/build.properties owner=jenkins group=jenkins
-  when: phing_commons_root_properties.stat.exists == False
-
-- name: install defined jenkins users build.properties from ansible config
-  template: src=/vagrant/ansible/config/phing-commons/build.properties dest=/var/lib/jenkins/phing-commons/build.properties owner=jenkins group=jenkins
-  when: phing_commons_root_properties.stat.exists == True
+  notify:
+    - base_jenkins_restart

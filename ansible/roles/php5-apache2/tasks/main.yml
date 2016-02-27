@@ -6,7 +6,8 @@
 
 - name: configure php5 apache2
   template: src=php/apache2.tpl dest=/etc/php5/apache2/conf.d/00-provision.ini
-  notify: base_apache2_restart
+  notify:
+    - base_apache2_restart
 
 - name: configure apache2 modules
   apache2_module: state=present name={{item}}
@@ -15,7 +16,8 @@
     - rewrite
     - headers
     - vhost_alias
-  notify: base_apache2_restart
+  notify:
+    - base_apache2_restart
 
 - name: create apache2 sites
   template: src=sites/{{item}}.conf dest=/etc/apache2/sites-available/{{item}}.conf
@@ -24,15 +26,15 @@
     - 001-builds
     - 002-releases
     - 1000-dynamic-hosts
-  notify: base_apache2_restart
+  notify:
+    - base_apache2_restart
 
 - name: enable apache2 sites
-  command: a2ensite {{item}}
-  args:
-    creates: /etc/apache2/sites-enabled/{{item}}.conf
+  command: a2ensite {{item}} creates=/etc/apache2/sites-enabled/{{item}}.conf
   with_items:
     - 000-default
     - 001-builds
     - 002-releases
     - 1000-dynamic-hosts
-  notify: base_apache2_restart
+  notify:
+    - base_apache2_restart

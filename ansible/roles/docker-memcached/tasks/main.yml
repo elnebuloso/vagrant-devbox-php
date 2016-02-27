@@ -5,4 +5,4 @@
     image: memcached
     state: started
     ports:
-    - "11211:11211"
+      - "11211:11211"

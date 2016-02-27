@@ -1,7 +1,15 @@
 ---
 - name: install
   script: composer.sh creates=/usr/bin/composer
-  notify: base_composer_add_github_oauth_token
 
 - name: setting composer environment
-  template: src=composer-env.sh dest=/etc/profile.d/composer-env.sh
+  template: src=composer-env.tpl dest=/etc/profile.d/composer-env.sh
+
+- name: register github_oauth_token for root user
+  command: composer config -g github-oauth.github.com {{github_oauth_token}}
+
+- name: register github_oauth_token for jenkins user
+  command: composer config -g github-oauth.github.com {{github_oauth_token}}
+  become: yes
+  become_method: sudo
+  become_user: jenkins

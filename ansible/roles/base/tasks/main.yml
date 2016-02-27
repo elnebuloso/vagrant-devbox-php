@@ -4,7 +4,8 @@
 
 - name: configure the timezone
   template: src=timezone.tpl dest=/etc/timezone
-  notify: base_update_timezone
+  notify:
+    - base_update_timezone
 
 - locale_gen: name=de_DE state=present
 - locale_gen: name=de_DE@euro state=present
@@ -15,7 +16,8 @@
   with_items:
     - ntp
     - ntpdate
-  notify: base_update_ntp
+  notify:
+    - base_update_ntp
 
 - name: install packages
   apt: pkg={{item}} state=present update_cache=yes cache_valid_time=3600
@@ -47,4 +49,5 @@
   with_items:
     - proxy
     - proxy_http
-  notify: base_apache2_restart
+  notify:
+    - base_apache2_restart
