@@ -7,6 +7,7 @@
     - base
     - ci
     - ci-compass
+    - ci-jenkins
     - php5
     - php5-apache2
     - composer
