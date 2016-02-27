@@ -26,5 +26,6 @@
     - managed-scripts
     - publish-over-ssh
     - categorized-view
+    - ez-templates
   notify:
     - base_jenkins_restart
