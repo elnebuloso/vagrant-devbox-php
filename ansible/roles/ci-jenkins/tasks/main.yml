@@ -1,6 +1,4 @@
 ---
-- include: mounts.yml
-
 - name: install essential packages
   apt: pkg={{item}} state=present update_cache=yes cache_valid_time=3600
   with_items:
@@ -27,4 +25,5 @@
   notify:
     - base_apache2_restart
 
+- include: mounts.yml
 - include: plugins.yml

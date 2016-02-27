@@ -1,6 +1,15 @@
 ---
+- name: install essential packages
+  apt: pkg={{item}} state=present update_cache=yes cache_valid_time=3600
+  with_items:
+    - cifs-utils
+
 - name: mount jenkins
-  action: mount name=/var/lib/jenkins src=nas.fritz.box:/jenkins fstype=nfs state=mounted opts=uid=jenkins,gid=jenkins
+  action: mount name=/var/lib/jenkins src=//nas.fritz.box/jenkins fstype=cifs state=mounted opts=uid=jenkins,gid=jenkins,password=
+  notify:
+    - base_jenkins_restart
 
 - name: mount jenkins thin-backup
-  action: mount name=/var/lib/jenkins-thin-backup src=nas.fritz.box:/jenkins-thin-backup fstype=nfs state=mounted opts=uid=jenkins,gid=jenkins
+  action: mount name=/var/lib/jenkins-thin-backup src=//nas.fritz.box/jenkins-thin-backup fstype=cifs state=mounted opts=uid=jenkins,gid=jenkins,password=
+  notify:
+    - base_jenkins_restart

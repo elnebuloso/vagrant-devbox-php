@@ -29,8 +29,8 @@ full stack php development box through vagrant, ansible and docker
 
 ## running the ansible playbook over console
 
-* you don't have to do this, vagrant provisioning does this for you
 * all ansible roles are defined with dependencies so that the will automatically install 
+* if the playbook should be executed on vagrant provisioning, uncomment line in Vagrantfile
 
 ### examples
 

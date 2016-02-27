@@ -11,8 +11,8 @@ Vagrant.configure(2) do |config|
     config.vm.hostname = "box.entwickl.de"
 
     config.vm.provider "virtualbox" do |v|
-      v.memory = 2048
-      v.cpus = 2
+      v.memory = setting['vbox_memory']
+      v.cpus = setting['vbox_cpus']
     end
 
     # config.vbguest.auto_update = false
@@ -26,7 +26,8 @@ Vagrant.configure(2) do |config|
 
     config.vm.provision "shell", path: "provision/001-keys.sh"
     config.vm.provision "shell", path: "provision/002-ansible.sh"
-    config.vm.provision "shell", inline: "sudo PYTHONUNBUFFERED=1 ansible-playbook -i \"localhost,\" -c local /vagrant/ansible/install.yml"
+
+    # config.vm.provision "shell", inline: "sudo PYTHONUNBUFFERED=1 ansible-playbook -i \"localhost,\" -c local /vagrant/ansible/install.yml"
 
     setting['vagrant_synced_folders'].each do |i|
         config.vm.synced_folder i['host'], i['guest'], type: "nfs"

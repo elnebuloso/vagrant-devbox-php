@@ -3,7 +3,7 @@
   file: path=/opt/vagrant/phing-commons state=directory recurse=yes
 
 - name: install
-  command: tar xfz /vagrant/files/phing-commons/releases/phing-commons-9.2.0.tar.gz -C /opt/vagrant/phing-commons creates=/opt/vagrant/phing-commons/VERSION
+  unarchive: src=/vagrant/files/phing-commons/releases/phing-commons-9.2.0.tar.gz dest=/opt/vagrant/phing-commons creates=/opt/vagrant/phing-commons/VERSION
 
 - name: install environment
   template: src=phing-commons.tpl dest=/etc/profile.d/phing-commons.sh
