@@ -22,24 +22,18 @@
 - name: install packages
   apt: pkg={{item}} state=present update_cache=yes cache_valid_time=3600
   with_items:
-    - nano
-    - htop
-    - locate
-    - curl
-    - finger
     - software-properties-common
     - python-passlib
     - python-pip
-    - nullmailer
-    - git
-    - subversion
+    - finger
+    - locate
+    - nano
+    - htop
+    - curl
     - apache2
-
-- name: create mailname
-  template: src=mailname.tpl dest=/etc/mailname
-
-- name: create nullmailer remotes
-  template: src=nullmailer/remotes.tpl dest=/etc/nullmailer/remotes
+    - nullmailer
+    - subversion
+    - git
 
 - name: remove apache2 default html folder
   file: path=/var/www/html state=absent
@@ -51,3 +45,9 @@
     - proxy_http
   notify:
     - base_apache2_restart
+
+- name: create mailname
+  template: src=mailname.tpl dest=/etc/mailname
+
+- name: create nullmailer remotes
+  template: src=nullmailer/remotes.tpl dest=/etc/nullmailer/remotes
