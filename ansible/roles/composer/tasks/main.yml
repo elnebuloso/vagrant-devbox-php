@@ -1,8 +1,7 @@
 ---
 - name: install
   script: composer.sh creates=/usr/bin/composer
-  notify:
-    - composer_add_github_oauth_token
+  notify: base_composer_add_github_oauth_token
 
 - name: setting composer environment
   template: src=composer-env.sh dest=/etc/profile.d/composer-env.sh

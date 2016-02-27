@@ -10,3 +10,6 @@
 
 - name: base_jenkins_restart
   service: name=jenkins enabled=yes state=restarted
+
+- name: base_composer_add_github_oauth_token
+  command: composer config -g github-oauth.github.com {{github_oauth_token}}
