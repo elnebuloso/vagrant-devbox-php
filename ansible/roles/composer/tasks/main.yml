@@ -13,3 +13,4 @@
   become: yes
   become_method: sudo
   become_user: jenkins
+  when: ci_jenkins_installed == true

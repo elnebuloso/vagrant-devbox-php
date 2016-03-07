@@ -18,24 +18,26 @@
 
 - name: install defined root users build.properties from ansible config
   template: dest=/root/phing-commons/build.properties src=/vagrant/ansible/config/phing-commons/build.properties
-  when: phing_commons_root_properties.stat.exists == True
+  when: phing_commons_root_properties.stat.exists == true
 
 - name: install default root users build.properties
   template: dest=/root/phing-commons/build.properties src=build.properties.tpl
-  when: phing_commons_root_properties.stat.exists == False
+  when: phing_commons_root_properties.stat.exists == false
 
 
 
 - name: install jenkins users phing-commons folder
   file: path=/var/lib/jenkins/phing-commons state=directory recurse=yes
+  when: ci_jenkins_installed == true
 
 - stat: path=/vagrant/ansible/config/phing-commons/build.properties
   register: phing_commons_root_properties
+  when: ci_jenkins_installed == true
 
 - name: install defined jenkins users build.properties from ansible config
   template: owner=jenkins group=jenkins dest=/var/lib/jenkins/phing-commons/build.properties src=/vagrant/ansible/config/phing-commons/build.properties
-  when: phing_commons_root_properties.stat.exists == True
+  when: ci_jenkins_installed == true and phing_commons_root_properties.stat.exists == true
 
 - name: install default jenkins users build.properties
   template: owner=jenkins group=jenkins dest=/var/lib/jenkins/phing-commons/build.properties src=build.properties
-  when: phing_commons_root_properties.stat.exists == False
+  when: ci_jenkins_installed == true and phing_commons_root_properties.stat.exists == false

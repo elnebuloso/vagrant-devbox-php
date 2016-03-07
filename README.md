@@ -15,7 +15,8 @@ full stack php development box through vagrant, ansible and docker
 ## configuration and provisioning
 
 * copy box.yml.tpl as box.yml to setup vagrant
-* copy ansible/install.yml to setup ansible provisioning
+* copy ansible/install.yml.tpl as ansible/install.yml to setup ansible provisioning
+* copy ansible/update.yml.tpl as ansible/update.yml for update tasks after installation
 
 ## connecting over ssh
 

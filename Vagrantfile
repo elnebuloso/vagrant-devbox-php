@@ -30,6 +30,6 @@ Vagrant.configure(2) do |config|
     # config.vm.provision "shell", inline: "sudo PYTHONUNBUFFERED=1 ansible-playbook -i \"localhost,\" -c local /vagrant/ansible/install.yml"
 
     setting['vagrant_synced_folders'].each do |i|
-        config.vm.synced_folder i['host'], i['guest'], type: "nfs"
+        config.vm.synced_folder i['host'], i['guest']
     end
 end

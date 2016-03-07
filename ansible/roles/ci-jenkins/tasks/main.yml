@@ -25,4 +25,4 @@
   notify:
     - base_apache2_restart
 
-- include: mounts.yml
+- set_fact: ci_jenkins_installed=true

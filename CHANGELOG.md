@@ -1,5 +1,11 @@
 # changelog
 
+## 1.9.1
+
+- removed config.vm.synced_folder type nfs from Vagrantfile, problems installing over ubuntu
+- The type of synced folder. If this is not specified, Vagrant will automatically choose the best synced folder option for your environment.
+- moved 
+
 ## 1.9.0
 
 - removed default apache2 site /var/www/html
