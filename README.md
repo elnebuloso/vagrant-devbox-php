@@ -14,6 +14,7 @@ full stack php development box through vagrant, ansible and docker
 
 ## configuration and provisioning
 
+* copy Vagrantfile.tpl as Vagrantfile to setup vagrant
 * copy box.yml.tpl as box.yml to setup vagrant
 * copy ansible/install.yml.tpl as ansible/install.yml to setup ansible provisioning
 * copy ansible/update.yml.tpl as ansible/update.yml for update tasks after installation
@@ -38,6 +39,7 @@ full stack php development box through vagrant, ansible and docker
 ```
 # running defined ansible roles
 sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/install.yml
+sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/update.yml
 ```
 
 ## features

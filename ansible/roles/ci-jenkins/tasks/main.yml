@@ -24,5 +24,3 @@
   command: a2ensite 100-ci-jenkins.conf creates=/etc/apache2/sites-enabled/100-ci-jenkins.conf
   notify:
     - base_apache2_restart
-
-- set_fact: ci_jenkins_installed=true

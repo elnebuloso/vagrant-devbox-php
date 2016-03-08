@@ -1,5 +1,11 @@
 # changelog
 
+## 1.9.2
+
+- bugfix composer for jenkins if jenkins is not existing
+- bugfix composer-phing-commons for jenkins if jenkins is not existing
+- commented out optional vagrant plugin vagrant-vbguest, fails if not existing
+
 ## 1.9.1
 
 - removed config.vm.synced_folder type nfs from Vagrantfile, problems installing over ubuntu

@@ -8,9 +8,14 @@
 - name: register github_oauth_token for root user
   command: composer config -g github-oauth.github.com {{github_oauth_token}}
 
+
+
+- stat: path=/var/lib/jenkins
+  register: jenkins_home_directory
+
 - name: register github_oauth_token for jenkins user
   command: composer config -g github-oauth.github.com {{github_oauth_token}}
   become: yes
   become_method: sudo
   become_user: jenkins
-  when: ci_jenkins_installed == true
+  when: jenkins_home_directory.stat.exists == true
