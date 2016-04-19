@@ -4,7 +4,6 @@
 
 require "yaml"
 setting = YAML.load_file "box.yml"
-ansible_provisioning = "base"
 
 Vagrant.configure(2) do |config|
     config.vm.box = "bento/ubuntu-14.04"

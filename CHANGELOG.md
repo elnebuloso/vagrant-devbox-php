@@ -1,5 +1,9 @@
 # changelog
 
+## 1.9.3, 1.9.4
+
+- different cleanup code
+
 ## 1.9.2
 
 - bugfix composer for jenkins if jenkins is not existing
