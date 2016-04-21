@@ -14,5 +14,6 @@
     - {role: composer, when: install_php5 == "yes" and install_composer == "yes"}
     - {role: composer, when: install_php5 == "yes" and install_composer == "yes" and install_composer_phing_commons == "yes"}
     - {role: docker, when: install_docker == "yes"}
+    - {role: docker-memcached, when: install_docker == "yes" and install_docker_memcached == "yes"}
     - {role: docker-mongo, when: install_docker == "yes" and install_docker_mongo == "yes"}
     - {role: docker-mysql, when: install_docker == "yes" and install_docker_mysql == "yes"}
