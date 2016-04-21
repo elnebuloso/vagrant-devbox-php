@@ -1,3 +1,5 @@
 install.yml
 install.retry
 update.yml
+update.retry
+vars/all.yml
