@@ -12,12 +12,14 @@ full stack php development box through vagrant, ansible and docker
 * vagrant plugin install vagrant-vbguest
 * vagrant plugin install vagrant-hostmanager
 
-## configuration and provisioning
+## vagrant configuration
 
 * copy Vagrantfile.tpl as Vagrantfile to setup vagrant
 * copy box.yml.tpl as box.yml to setup vagrant
-* copy ansible/install.yml.tpl as ansible/install.yml to setup ansible provisioning
-* copy ansible/update.yml.tpl as ansible/update.yml for update tasks after installation
+
+## ansible provision configuration
+
+* copy vars/all.yml.tpl as vars/all.yml to setup ansible provisioning
 
 ## connecting over ssh
 
@@ -31,15 +33,10 @@ full stack php development box through vagrant, ansible and docker
 
 ## running the ansible playbook over console
 
-* all ansible roles are defined with dependencies so that the will automatically install 
 * if the playbook should be executed on vagrant provisioning, uncomment line in Vagrantfile
 
-### examples
-
 ```
-# running defined ansible roles
 sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/install.yml
-sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/update.yml
 ```
 
 ## features
