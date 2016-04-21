@@ -60,11 +60,17 @@ sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/install.yml
 
 ### jenkins
 
-* available through apache2 proxy
 * http://jenkins.box.entwickl.de/
-* http://box.entwickl.de:8080
-  * include mounts.yml to mount jenkins directories outside the vagrant box to keep jenkins after new box provisioning
-  * include plugins.yml to install plugins
+
+#### jenkins plugins
+
+* plugins are installed via http
+* jenkins has to be installed, so we have to run this afterwards
+* splitting this into own playbook makes plugin installation also easier
+
+```
+sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/jenkins-plugins.yml
+```
 
 ### docker mysql
 
@@ -83,33 +89,17 @@ sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/install.yml
 
 ### docker grafana
 
-* available through apache2 proxy
 * http://grafana.box.entwickl.de/
-* http://box.entwickl.de:49152
 * https://hub.docker.com/r/grafana/grafana/
 
 ### docker graphite + statsd
 
-* available through apache2 proxy
 * http://graphite.box.entwickl.de/
-* http://box.entwickl.de:49153
 * https://hub.docker.com/r/hopsoft/graphite-statsd/
-
-### docker ansible semaphore
-
-* available through apache2 proxy
-* http://semaphore.box.entwickl.de/
-* http://box.entwickl.de:49154
-* https://hub.docker.com/r/castawaylabs/semaphore/
-  * Initial Login
-  * admin@semaphore.local
-  * CastawayLabs
 
 ### docker mailcatcher
 
-* available through apache2 proxy
 * http://mailcatcher.box.entwickl.de/
-* http://box.entwickl.de:1080
 * https://hub.docker.com/r/schickling/mailcatcher/
 
 ## links
