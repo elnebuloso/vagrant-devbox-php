@@ -4,13 +4,16 @@
 
 - name: setting composer environment
   template: src=composer-env.tpl dest=/etc/profile.d/composer-env.sh
+  register: composer_environment_update
 
 - name: register github_oauth_token for root user
   command: composer config -g github-oauth.github.com {{github_oauth_token}}
+  when: composer_environment_update.changed == true
 
 
 
-- stat: path=/var/lib/jenkins
+- name: check if jenkins home directory exists
+  stat: path=/var/lib/jenkins
   register: jenkins_home_directory
 
 - name: register github_oauth_token for jenkins user
@@ -18,4 +21,4 @@
   become: yes
   become_method: sudo
   become_user: jenkins
-  when: jenkins_home_directory.stat.exists == true
+  when: composer_environment_update.changed == true and jenkins_home_directory.stat.exists == true

@@ -26,7 +26,8 @@
 
 
 
-- stat: path=/var/lib/jenkins
+- name: check if jenkins home directory exists
+  stat: path=/var/lib/jenkins
   register: jenkins_home_directory
 
 - stat: path=/vagrant/ansible/config/phing-commons/build.properties
