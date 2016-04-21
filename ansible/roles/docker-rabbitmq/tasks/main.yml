@@ -1,0 +1,29 @@
+---
+- name: install container
+  docker:
+    name: "rabbitmq"
+    image: "rabbitmq:{{docker_rabbitmq_version}}"
+    state: "{{docker_rabbitmq_state}}"
+    hostname: "{{docker_rabbitmq_hostname}}"
+
+- name: install container
+  docker:
+    name: "rabbitmq"
+    image: "rabbitmq:{{docker_rabbitmq_version}}-management"
+    state: "{{docker_rabbitmq_state}}"
+    hostname: "{{docker_rabbitmq_hostname}}"
+    ports:
+      - "{{docker_rabbitmq_web_port}}:15672"
+    env:
+      RABBITMQ_DEFAULT_USER: "{{docker_rabbitmq_user}}"
+      RABBITMQ_DEFAULT_PASS: "{{docker_rabbitmq_pass}}"
+
+- name: create apache2 sites
+  template: src=vhost.conf dest=/etc/apache2/sites-available/100-docker-rabbitmq.conf
+  notify:
+    - base_apache2_restart
+
+- name: enable apache2 sites
+  command: a2ensite 100-docker-rabbitmq.conf creates=/etc/apache2/sites-enabled/100-docker-rabbitmq.conf
+  notify:
+    - base_apache2_restart

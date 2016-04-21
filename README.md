@@ -76,6 +76,8 @@ sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/jenkins-plugins.
 
 * http://box.entwickl.de:3306
 * https://hub.docker.com/_/mysql/
+* user: root
+* pass: welcome
 
 ### docker mongo
 
@@ -106,6 +108,8 @@ sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/jenkins-plugins.
 
 * http://grafana.box.entwickl.de/
 * https://hub.docker.com/r/grafana/grafana/
+* user: admin
+* pass: welcome
 
 ### docker graphite + statsd
 
@@ -116,6 +120,13 @@ sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/jenkins-plugins.
 
 * http://mailcatcher.box.entwickl.de/
 * https://hub.docker.com/r/schickling/mailcatcher/
+
+### docker rabbitmq
+
+* http://rabbitmq.box.entwickl.de/
+* https://hub.docker.com/_/rabbitmq/
+* user: root
+* pass: welcome
 
 ## links
 
