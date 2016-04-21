@@ -1,6 +1,6 @@
 ---
 timezone: "Europe/Berlin"
-github_oauth_token: "your_secret_github_oauth_token"
+github_oauth_token: "ed796c64f929ec0e58750256e1022f6985bd615f"
 
 ######################################################################################
 
@@ -49,6 +49,14 @@ composer_phing_commons: "yes"
 
 docker: "yes"
 
+docker_elasticsearch: "yes"
+docker_elasticsearch_state: "started"
+docker_elasticsearch_version: "2.3"
+docker_elasticsearch_kibana_state: "started"
+docker_elasticsearch_kibana_version: "4.5"
+docker_elasticsearch_kibana_web_name: "kibana.elasticsearch"
+docker_elasticsearch_kibana_web_port: "49154"
+
 docker_grafana: "yes"
 docker_grafana_state: "started"
 docker_grafana_version: "latest"
@@ -80,6 +88,10 @@ docker_mysql: "yes"
 docker_mysql_state: "started"
 docker_mysql_version: "5.5"
 docker_mysql_root_password: "welcome"
+
+docker_redis: "yes"
+docker_redis_state: "started"
+docker_redis_version: "3.0"
 
 ######################################################################################
 
