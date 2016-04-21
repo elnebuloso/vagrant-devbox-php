@@ -1,11 +1,11 @@
 ---
 - name: install container
   docker:
-    name: grafana
-    image: grafana/grafana:{{docker_grafana_version}}
-    state: started
+    name: "grafana"
+    image: "grafana/grafana:{{docker_grafana_version}}"
+    state: "{{docker_grafana_state}}"
     ports:
-      - "49152:3000"
+      - "{{docker_grafana_web_port}}:3000"
     env:
       GF_SECURITY_ADMIN_PASSWORD: "{{docker_grafana_admin_password}}"
 

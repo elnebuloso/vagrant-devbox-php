@@ -1,8 +1,8 @@
 ---
 - name: install container
   docker:
-    name: mongo
-    image: mongo:{{docker_mongo_version}}
-    state: started
+    name: "mongo"
+    image: "mongo:{{docker_mongo_version}}"
+    state: "{{docker_mongo_state}}"
     ports:
       - "27017:27017"

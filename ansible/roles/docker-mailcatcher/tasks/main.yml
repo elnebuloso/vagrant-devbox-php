@@ -1,11 +1,11 @@
 ---
 - name: install container
   docker:
-    name: mailcatcher
-    image: schickling/mailcatcher:{{docker_mailcatcher_version}}
-    state: started
+    name: "mailcatcher"
+    image: "schickling/mailcatcher:{{docker_mailcatcher_version}}"
+    state: "{{docker_mailcatcher_state}}"
     ports:
-      - "1080:1080"
+      - "{{docker_mailcatcher_web_port}}:1080"
       - "1025:1025"
 
 - name: create apache2 sites

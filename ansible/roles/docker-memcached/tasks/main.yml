@@ -1,8 +1,8 @@
 ---
 - name: install container
   docker:
-    name: memcached
-    image: memcached:{{docker_memcached_version}}
-    state: started
+    name: "memcached"
+    image: "memcached:{{docker_memcached_version}}"
+    state: "{{docker_memcached_state}}"
     ports:
       - "11211:11211"

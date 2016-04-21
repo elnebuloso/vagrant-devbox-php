@@ -7,9 +7,9 @@
 
 - name: install container
   docker:
-    name: mysql
-    image: mysql:{{docker_mysql_version}}
-    state: started
+    name: "mysql"
+    image: "mysql:{{docker_mysql_version}}"
+    state: "{{docker_mysql_state}}"
     volumes:
       - "/opt/docker/mysql/conf.d:/etc/mysql/conf.d"
     ports:
