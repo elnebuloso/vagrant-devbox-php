@@ -72,34 +72,14 @@ sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/install.yml
 sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/jenkins-plugins.yml
 ```
 
-### docker mysql
-
-* http://box.entwickl.de:3306
-* https://hub.docker.com/_/mysql/
-* user: root
-* pass: welcome
-
-### docker mongo
-
-* http://box.entwickl.de:27017
-* https://hub.docker.com/_/mongo/
-
-### docker memcached
-
-* http://box.entwickl.de:11211
-* https://hub.docker.com/_/memcached/
-
-### docker redis
-
-* http://box.entwickl.de:6379
-* https://hub.docker.com/_/redis/
+## docker
 
 ### docker elasticsearch
 
 * http://box.entwickl.de:9200
 * https://hub.docker.com/_/elasticsearch/
 
-#### docker elasticsearch kibana
+##### docker elasticsearch kibana
 
 * http://kibana.elasticsearch.box.entwickl.de/
 * https://hub.docker.com/_/kibana/
@@ -121,12 +101,39 @@ sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/jenkins-plugins.
 * http://mailcatcher.box.entwickl.de/
 * https://hub.docker.com/r/schickling/mailcatcher/
 
+### docker memcached
+
+* http://box.entwickl.de:11211
+* https://hub.docker.com/_/memcached/
+
+### docker mongo
+
+* http://box.entwickl.de:27017
+* https://hub.docker.com/_/mongo/
+
+### docker mysql
+
+* http://box.entwickl.de:3306
+* https://hub.docker.com/_/mysql/
+* user: root
+* pass: welcome
+
+### docker neo4j
+
+* http://neo4j.box.entwickl.de/
+* https://hub.docker.com/_/neo4j/
+
 ### docker rabbitmq
 
 * http://rabbitmq.box.entwickl.de/
 * https://hub.docker.com/_/rabbitmq/
 * user: root
 * pass: welcome
+
+### docker redis
+
+* http://box.entwickl.de:6379
+* https://hub.docker.com/_/redis/
 
 ## links
 

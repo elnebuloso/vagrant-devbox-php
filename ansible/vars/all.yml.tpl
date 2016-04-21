@@ -89,6 +89,12 @@ docker_mysql_state: "started"
 docker_mysql_version: "5.5"
 docker_mysql_root_password: "welcome"
 
+docker_neo4j: "yes"
+docker_neo4j_state: "started"
+docker_neo4j_version: "latest"
+docker_neo4j_web_port: "49156"
+docker_neo4j_web_name: "neo4j"
+
 docker_rabbitmq: "yes"
 docker_rabbitmq_state: "started"
 docker_rabbitmq_version: "3.6"
