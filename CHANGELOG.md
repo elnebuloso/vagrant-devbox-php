@@ -2,6 +2,8 @@
 
 ## 1.10.0
 
+- configuration update
+
 ## 1.9.3, 1.9.4
 
 - different cleanup code
