@@ -2,7 +2,7 @@
 - name: install container
   docker:
     name: graphite
-    image: hopsoft/graphite-statsd
+    image: hopsoft/graphite-statsd:{{docker_graphite_statsd_Version}}
     state: started
     ports:
       - "49153:80"

@@ -2,12 +2,12 @@
 - name: install container
   docker:
     name: grafana
-    image: grafana/grafana
+    image: grafana/grafana:{{docker_grafana_version}}
     state: started
     ports:
       - "49152:3000"
     env:
-      GF_SECURITY_ADMIN_PASSWORD: welcome
+      GF_SECURITY_ADMIN_PASSWORD: "{{docker_grafana_admin_password}}"
 
 - name: create apache2 sites
   template: src=vhost.conf dest=/etc/apache2/sites-available/100-docker-grafana.conf

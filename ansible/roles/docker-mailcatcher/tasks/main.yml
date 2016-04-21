@@ -2,7 +2,7 @@
 - name: install container
   docker:
     name: mailcatcher
-    image: schickling/mailcatcher
+    image: schickling/mailcatcher:{{docker_mailcatcher_version}}
     state: started
     ports:
       - "1080:1080"

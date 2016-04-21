@@ -6,14 +6,20 @@
 
   roles:
     - {role: base}
-    - {role: ci, when: install_ci == "yes"}
-    - {role: ci-compass, when: install_ci == "yes" and install_ci_compass == "yes"}
-    - {role: ci-jenkins, when: install_ci == "yes" and install_ci_jenkins == "yes"}
-    - {role: php5, when: install_php5 == "yes"}
-    - {role: php5-apache2, when: install_php5 == "yes" and install_php5_apache2 == "yes"}
-    - {role: composer, when: install_php5 == "yes" and install_composer == "yes"}
-    - {role: composer, when: install_php5 == "yes" and install_composer == "yes" and install_composer_phing_commons == "yes"}
-    - {role: docker, when: install_docker == "yes"}
-    - {role: docker-memcached, when: install_docker == "yes" and install_docker_memcached == "yes"}
-    - {role: docker-mongo, when: install_docker == "yes" and install_docker_mongo == "yes"}
-    - {role: docker-mysql, when: install_docker == "yes" and install_docker_mysql == "yes"}
+    - {role: ci,         when: ci == "yes"}
+    - {role: ci-compass, when: ci == "yes" and ci_compass == "yes"}
+    - {role: ci-jenkins, when: ci == "yes" and ci_jenkins == "yes"}
+
+    - {role: php5,         when: php5 == "yes"}
+    - {role: php5-apache2, when: php5 == "yes" and php5_apache2 == "yes"}
+
+    - {role: composer,               when: php5 == "yes" and composer == "yes"}
+    - {role: composer-phing-commons, when: php5 == "yes" and composer == "yes" and composer_phing_commons == "yes"}
+
+    - {role: docker,                   when: docker == "yes"}
+    - {role: docker-grafana,           when: docker == "yes" and docker_grafana == "yes"}
+    - {role: docker-graphite-statsd,   when: docker == "yes" and docker_graphite_statsd == "yes"}
+    - {role: docker-mailcatcher,       when: docker == "yes" and docker_mailcatcher == "yes"}
+    - {role: docker-memcached,         when: docker == "yes" and docker_memcached == "yes"}
+    - {role: docker-mongo,             when: docker == "yes" and docker_mongo == "yes"}
+    - {role: docker-mysql,             when: docker == "yes" and docker_mysql == "yes"}
