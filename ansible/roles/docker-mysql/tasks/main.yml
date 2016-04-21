@@ -8,11 +8,11 @@
 - name: install container
   docker:
     name: mysql
-    image: mysql
+    image: mysql:{{docker_mysql_version}}
     state: started
     volumes:
       - "/opt/docker/mysql/conf.d:/etc/mysql/conf.d"
     ports:
       - "3306:3306"
     env:
-      MYSQL_ROOT_PASSWORD: welcome
+      MYSQL_ROOT_PASSWORD: "{{docker_mysql_root_password}}"

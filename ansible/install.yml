@@ -1,0 +1,18 @@
+---
+- hosts: all
+
+  vars_files:
+    - vars/all.yml
+
+  roles:
+    - {role: base}
+    - {role: ci, when: install_ci == "yes"}
+    - {role: ci-compass, when: install_ci == "yes" and install_ci_compass == "yes"}
+    - {role: ci-jenkins, when: install_ci == "yes" and install_ci_jenkins == "yes"}
+    - {role: php5, when: install_php5 == "yes"}
+    - {role: php5-apache2, when: install_php5 == "yes" and install_php5_apache2 == "yes"}
+    - {role: composer, when: install_php5 == "yes" and install_composer == "yes"}
+    - {role: composer, when: install_php5 == "yes" and install_composer == "yes" and install_composer_phing_commons == "yes"}
+    - {role: docker, when: install_docker == "yes"}
+    - {role: docker-mongo, when: install_docker == "yes" and install_docker_mongo == "yes"}
+    - {role: docker-mysql, when: install_docker == "yes" and install_docker_mysql == "yes"}
