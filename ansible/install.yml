@@ -14,12 +14,14 @@
     - {role: composer, when: php5 == "yes" and composer == "yes"}
     - {role: composer-phing-commons, when: php5 == "yes" and composer == "yes" and composer_phing_commons == "yes"}
     - {role: docker, when: docker == "yes"}
+    - {role: docker-elasticsearch, when: docker == "yes" and docker_elasticsearch == "yes"}
     - {role: docker-grafana, when: docker == "yes" and docker_grafana == "yes"}
     - {role: docker-graphite-statsd, when: docker == "yes" and docker_graphite_statsd == "yes"}
     - {role: docker-mailcatcher, when: docker == "yes" and docker_mailcatcher == "yes"}
     - {role: docker-memcached, when: docker == "yes" and docker_memcached == "yes"}
     - {role: docker-mongo, when: docker == "yes" and docker_mongo == "yes"}
     - {role: docker-mysql, when: docker == "yes" and docker_mysql == "yes"}
+    - {role: docker-redis, when: docker == "yes" and docker_redis == "yes"}
     - {role: nodejs, when: nodejs == "yes"}
     - {role: nodejs-npm-bower, when: nodejs == "yes" and nodejs_npm_bower == "yes"}
     - {role: nodejs-npm-grunt-cli, when: nodejs == "yes" and nodejs_npm_grunt_cli == "yes"}

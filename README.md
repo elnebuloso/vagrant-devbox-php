@@ -87,6 +87,21 @@ sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/jenkins-plugins.
 * http://box.entwickl.de:11211
 * https://hub.docker.com/_/memcached/
 
+### docker redis
+
+* http://box.entwickl.de:6379
+* https://hub.docker.com/_/redis/
+
+### docker elasticsearch
+
+* http://box.entwickl.de:9200
+* https://hub.docker.com/_/elasticsearch/
+
+#### docker elasticsearch kibana
+
+* http://kibana.elasticsearch.box.entwickl.de/
+* https://hub.docker.com/_/kibana/
+
 ### docker grafana
 
 * http://grafana.box.entwickl.de/
