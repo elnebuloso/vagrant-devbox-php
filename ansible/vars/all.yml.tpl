@@ -1,6 +1,6 @@
 ---
 timezone: "Europe/Berlin"
-github_oauth_token: "ed796c64f929ec0e58750256e1022f6985bd615f"
+github_oauth_token: "your_secret_github_oauth_token"
 
 ######################################################################################
 
