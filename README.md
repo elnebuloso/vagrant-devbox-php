@@ -50,6 +50,7 @@ sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/install.yml
 * phing-commons
 * jenkins
 * docker
+* nodejs ~4.4 LTS + latest npm
 
 ### virtual docroots (apache2)
 
@@ -134,6 +135,14 @@ sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/jenkins-plugins.
 
 * http://box.entwickl.de:6379
 * https://hub.docker.com/_/redis/
+
+## nodejs
+
+* nodejs ~4.4 LTS
+* npm
+* npm bower
+* npm grunt-cli
+* https://nodejs.org/en/download/package-manager/
 
 ## links
 

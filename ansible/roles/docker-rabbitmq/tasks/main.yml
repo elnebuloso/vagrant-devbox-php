@@ -8,7 +8,7 @@
 
 - name: install container
   docker:
-    name: "rabbitmq"
+    name: "rabbitmq-management"
     image: "rabbitmq:{{docker_rabbitmq_version}}-management"
     state: "{{docker_rabbitmq_state}}"
     hostname: "{{docker_rabbitmq_hostname}}"

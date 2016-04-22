@@ -111,6 +111,7 @@ docker_redis_version: "3.0"
 ######################################################################################
 
 nodejs: "yes"
+nodejs_npm: "yes"
 nodejs_npm_bower: "yes"
 nodejs_npm_grunt_cli: "yes"
 

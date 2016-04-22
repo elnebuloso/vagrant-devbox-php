@@ -25,5 +25,6 @@
     - {role: docker-rabbitmq, when: docker == "yes" and docker_rabbitmq == "yes"}
     - {role: docker-redis, when: docker == "yes" and docker_redis == "yes"}
     - {role: nodejs, when: nodejs == "yes"}
-    - {role: nodejs-npm-bower, when: nodejs == "yes" and nodejs_npm_bower == "yes"}
-    - {role: nodejs-npm-grunt-cli, when: nodejs == "yes" and nodejs_npm_grunt_cli == "yes"}
+    - {role: nodejs-npm, when: nodejs == "yes" and nodejs_npm == "yes"}
+    - {role: nodejs-npm-bower, when: nodejs == "yes" and nodejs_npm == "yes" and nodejs_npm_bower == "yes"}
+    - {role: nodejs-npm-grunt-cli, when: nodejs == "yes" and nodejs_npm == "yes" and nodejs_npm_grunt_cli == "yes"}

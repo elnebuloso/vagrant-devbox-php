@@ -1,5 +1,12 @@
 # changelog
 
+## 1.12.0
+
+- rabbitmq bugfix management
+- nodejs LTS
+- npm latest
+- npm bower fix bower ESUDO Cannot be run with sudo using default .bowerrc for root and jenkins user
+
 ## 1.11.0
 
 - configuration update
