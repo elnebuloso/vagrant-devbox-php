@@ -1,5 +1,10 @@
 # changelog
 
+## 1.13.0
+
+- docker swagger-editor
+- docker swagger-generator
+
 ## 1.12.0
 
 - rabbitmq bugfix management

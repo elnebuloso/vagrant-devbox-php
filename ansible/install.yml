@@ -24,6 +24,8 @@
     - {role: docker-neo4j, when: docker == "yes" and docker_neo4j == "yes"}
     - {role: docker-rabbitmq, when: docker == "yes" and docker_rabbitmq == "yes"}
     - {role: docker-redis, when: docker == "yes" and docker_redis == "yes"}
+    - {role: docker-swagger-editor, when: docker == "yes" and docker_swagger_editor == "yes"}
+    - {role: docker-swagger-generator, when: docker == "yes" and docker_swagger_generator == "yes"}
     - {role: nodejs, when: nodejs == "yes"}
     - {role: nodejs-npm, when: nodejs == "yes" and nodejs_npm == "yes"}
     - {role: nodejs-npm-bower, when: nodejs == "yes" and nodejs_npm == "yes" and nodejs_npm_bower == "yes"}

@@ -136,6 +136,16 @@ sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/jenkins-plugins.
 * http://box.entwickl.de:6379
 * https://hub.docker.com/_/redis/
 
+### docker swagger-editor
+
+* http://swagger-editor.box.entwickl.de
+* https://hub.docker.com/r/swaggerapi/swagger-editor/
+
+### docker swagger-generator
+
+* http://swagger-generator.box.entwickl.de
+* https://hub.docker.com/r/swaggerapi/swagger-generator
+
 ## nodejs
 
 * nodejs ~4.4 LTS

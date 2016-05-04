@@ -108,6 +108,18 @@ docker_redis: "yes"
 docker_redis_state: "started"
 docker_redis_version: "3.0"
 
+docker_swagger_editor: "yes"
+docker_swagger_editor_state: "started"
+docker_swagger_editor_version: "v2.9.9"
+docker_swagger_editor_web_port: "49157"
+docker_swagger_editor_web_name: "swagger-editor"
+
+docker_swagger_generator: "yes"
+docker_swagger_generator_state: "started"
+docker_swagger_generator_version: "v2.1.6"
+docker_swagger_generator_web_port: "49158"
+docker_swagger_generator_web_name: "swagger-generator"
+
 ######################################################################################
 
 nodejs: "yes"
