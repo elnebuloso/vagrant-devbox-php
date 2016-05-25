@@ -16,6 +16,7 @@
     - php5-sqlite
     - php5-xdebug
     - php5-xsl
+    - php5-gd
 
 - name: configure php5 cli
   template: src=php/cli.tpl dest=/etc/php5/cli/conf.d/00-provision.ini
