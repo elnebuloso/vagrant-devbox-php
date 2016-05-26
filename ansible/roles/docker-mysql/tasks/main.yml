@@ -1,5 +1,8 @@
 ---
-- name: create volume directory for container
+- name: create volume directory for container volume
+  file: path=/opt/docker/mysql/data state=directory recurse=yes
+
+- name: create volume directory for container configuration
   file: path=/opt/docker/mysql/conf.d state=directory recurse=yes
 
 - name: configure mysql from template
@@ -11,6 +14,7 @@
     image: "mysql:{{docker_mysql_version}}"
     state: "{{docker_mysql_state}}"
     volumes:
+      - "/opt/docker/mysql/data:/var/lib/mysql"
       - "/opt/docker/mysql/conf.d:/etc/mysql/conf.d"
     ports:
       - "3306:3306"

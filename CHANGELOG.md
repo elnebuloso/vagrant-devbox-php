@@ -4,7 +4,6 @@
 
 - docker-elasticsearch data volume
 - docker-mongo data volume
-- docker-mysql data volume
 - docker-neo4j data volume
 - docker-rabbitmq data volume
 - docker-redis data volume
