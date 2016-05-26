@@ -1,5 +1,14 @@
 # changelog
 
+## todos 1.13.2
+
+- docker-elasticsearch data volume
+- docker-mongo data volume
+- docker-mysql data volume
+- docker-neo4j data volume
+- docker-rabbitmq data volume
+- docker-redis data volume
+
 ## 1.13.0, 1.13.1
 
 - docker swagger-editor
