@@ -3,7 +3,6 @@
 ################################################################################################
 
 if [ ! -f "$(which puttygen)" ]; then
-    apt-get update
     apt-get -y install putty-tools
 fi;
 
