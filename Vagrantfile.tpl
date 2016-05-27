@@ -19,8 +19,10 @@ Vagrant.configure(2) do |config|
     config.vbguest.auto_update = false
     config.vbguest.no_remote = true
 
+    config.vm.provision "shell", path: "provision/000-apt.sh"
     config.vm.provision "shell", path: "provision/001-keys.sh"
     config.vm.provision "shell", path: "provision/002-ansible.sh"
+    config.vm.provision "shell", path: "provision/003-ansible-galaxy.sh"
 
     setting['vagrant_synced_folders'].each do |i|
         config.vm.synced_folder i['host'], i['guest']
