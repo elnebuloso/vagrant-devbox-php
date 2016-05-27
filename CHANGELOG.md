@@ -1,7 +1,8 @@
 # changelog
 
-## todos 1.13.2
+## todos 2.0.0
 
+- ansible-galaxy for elnebuloso roles
 - docker-elasticsearch data volume
 - docker-mongo data volume
 - docker-neo4j data volume
