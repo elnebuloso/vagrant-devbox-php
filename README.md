@@ -4,8 +4,8 @@ full stack php development box through vagrant, ansible and docker
 
 ## requirements
 
-* VirtualBox 5.0.14
-* Vagrant 1.8.1
+* VirtualBox >= 5.0.14
+* Vagrant >= 1.8.1
 
 ### optional vagrant plugins
 
