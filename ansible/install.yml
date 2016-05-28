@@ -8,6 +8,6 @@
     - {role: elnebuloso.apache2}
     - {role: elnebuloso.php56}
     - {role: elnebuloso.php56-apache2}
-    - {role: elnebuloso.ci-jenkins}
     - {role: elnebuloso.docker}
     - {role: elnebuloso.docker-mysql}
+    - {role: elnebuloso.ci-jenkins}
