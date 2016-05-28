@@ -1,9 +1,12 @@
 ---
 - hosts: all
 
+  vars: []
+
   roles:
     - {role: elnebuloso.server-base}
     - {role: elnebuloso.apache2}
     - {role: elnebuloso.php56}
     - {role: elnebuloso.php56-apache2}
     - {role: elnebuloso.docker}
+    - {role: elnebuloso.docker-mysql}
