@@ -7,15 +7,20 @@ full stack php development box through vagrant, ansible and docker
 * VirtualBox >= 5.0.14
 * Vagrant >= 1.8.1
 
-### optional vagrant plugins
+### required vagrant plugins
 
 * vagrant plugin install vagrant-vbguest
-* vagrant plugin install vagrant-hostmanager
 
 ## vagrant configuration
 
 * copy Vagrantfile.tpl as Vagrantfile to setup vagrant
 * copy box.yml.tpl as box.yml to setup vagrant
+
+
+
+
+
+
 
 ## ansible provision configuration
 
