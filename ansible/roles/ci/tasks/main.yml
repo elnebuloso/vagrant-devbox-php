@@ -4,5 +4,5 @@
   with_items:
     - optipng
     - jpegoptim
-    - libclosure-compiler-java
     - yui-compressor
+    - libclosure-compiler-java
