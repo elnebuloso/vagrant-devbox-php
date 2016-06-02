@@ -11,20 +11,22 @@ full stack php development box through vagrant, ansible and docker
 
 * vagrant plugin install vagrant-vbguest
 
-## vagrant configuration
+## vagrant provision configuration
 
 * copy Vagrantfile.tpl as Vagrantfile to setup vagrant
 * copy box.yml.tpl as box.yml to setup vagrant
 
-
-
-
-
-
-
 ## ansible provision configuration
 
 * copy vars/all.yml.tpl as vars/all.yml to setup ansible provisioning
+
+### global installed roles through ansible-galaxy
+
+* https://galaxy.ansible.com/elnebuloso/server-base/
+* https://galaxy.ansible.com/elnebuloso/php56-apache2/
+* https://galaxy.ansible.com/elnebuloso/docker/
+* https://galaxy.ansible.com/elnebuloso/docker-mysql/
+* https://galaxy.ansible.com/elnebuloso/ci-jenkins/
 
 ## connecting over ssh
 
@@ -38,24 +40,11 @@ full stack php development box through vagrant, ansible and docker
 
 ## running the ansible playbook over console
 
-* if the playbook should be executed on vagrant provisioning, uncomment line in Vagrantfile
-
 ```
 sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/install.yml
 ```
 
 ## features
-
-* ubuntu 14.04 LTS
-* apache2
-* apache2 + php 5.6
-* ansible >= 2.0.0
-* compass
-* composer
-* phing-commons
-* jenkins
-* docker
-* nodejs ~4.4 LTS + latest npm
 
 ### virtual docroots (apache2)
 
@@ -63,6 +52,14 @@ sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/install.yml
 * Virtual Document Roots under /var/www/**
 * each directory that has a public folder e.g. /var/www/foo/public/index.php
   * can be called e.g. http://foo.box.entwickl.de/
+
+
+
+
+
+
+
+
 
 ### jenkins
 
