@@ -24,9 +24,16 @@ full stack php development box through vagrant, ansible and docker
 
 * https://galaxy.ansible.com/elnebuloso/server-base/
 * https://galaxy.ansible.com/elnebuloso/php56-apache2/
+* https://galaxy.ansible.com/elnebuloso/ci/
+* https://galaxy.ansible.com/elnebuloso/ci-vcs/
+* https://galaxy.ansible.com/elnebuloso/ci-compass/
+* https://galaxy.ansible.com/elnebuloso/ci-jenkins/
+* https://galaxy.ansible.com/elnebuloso/ci-phing-commons/
 * https://galaxy.ansible.com/elnebuloso/docker/
 * https://galaxy.ansible.com/elnebuloso/docker-mysql/
-* https://galaxy.ansible.com/elnebuloso/ci-jenkins/
+* https://galaxy.ansible.com/elnebuloso/docker-memcached/
+* https://galaxy.ansible.com/elnebuloso/docker-swagger-editor/
+* https://galaxy.ansible.com/elnebuloso/docker-swagger-generator/
 
 ## connecting over ssh
 
@@ -43,119 +50,3 @@ full stack php development box through vagrant, ansible and docker
 ```
 sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/install.yml
 ```
-
-## features
-
-### virtual docroots (apache2)
-
-* http://box.entwickl.de/
-* Virtual Document Roots under /var/www/**
-* each directory that has a public folder e.g. /var/www/foo/public/index.php
-  * can be called e.g. http://foo.box.entwickl.de/
-
-
-
-
-
-
-
-
-
-### jenkins
-
-* http://jenkins.box.entwickl.de/
-
-#### jenkins plugins
-
-* plugins are installed via http
-* jenkins has to be installed, so we have to run this afterwards
-* splitting this into own playbook makes plugin installation also easier
-
-```
-sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/jenkins-plugins.yml
-```
-
-## docker
-
-### docker elasticsearch
-
-* http://box.entwickl.de:9200
-* https://hub.docker.com/_/elasticsearch/
-
-##### docker elasticsearch kibana
-
-* http://kibana.elasticsearch.box.entwickl.de/
-* https://hub.docker.com/_/kibana/
-
-### docker grafana
-
-* http://grafana.box.entwickl.de/
-* https://hub.docker.com/r/grafana/grafana/
-* user: admin
-* pass: welcome
-
-### docker graphite + statsd
-
-* http://graphite.box.entwickl.de/
-* https://hub.docker.com/r/hopsoft/graphite-statsd/
-
-### docker mailcatcher
-
-* http://mailcatcher.box.entwickl.de/
-* https://hub.docker.com/r/schickling/mailcatcher/
-
-### docker memcached
-
-* http://box.entwickl.de:11211
-* https://hub.docker.com/_/memcached/
-
-### docker mongo
-
-* http://box.entwickl.de:27017
-* https://hub.docker.com/_/mongo/
-
-### docker mysql
-
-* http://box.entwickl.de:3306
-* https://hub.docker.com/_/mysql/
-* user: root
-* pass: welcome
-
-### docker neo4j
-
-* http://neo4j.box.entwickl.de/
-* https://hub.docker.com/_/neo4j/
-
-### docker rabbitmq
-
-* http://rabbitmq.box.entwickl.de/
-* https://hub.docker.com/_/rabbitmq/
-* user: root
-* pass: welcome
-
-### docker redis
-
-* http://box.entwickl.de:6379
-* https://hub.docker.com/_/redis/
-
-### docker swagger-editor
-
-* http://swagger-editor.box.entwickl.de
-* https://hub.docker.com/r/swaggerapi/swagger-editor/
-
-### docker swagger-generator
-
-* http://swagger-generator.box.entwickl.de
-* https://hub.docker.com/r/swaggerapi/swagger-generator
-
-## nodejs
-
-* nodejs ~4.4 LTS
-* npm
-* npm bower
-* npm grunt-cli
-* https://nodejs.org/en/download/package-manager/
-
-## links
-
-* https://developerkarma.com/post/2014/vagrant-tricks/

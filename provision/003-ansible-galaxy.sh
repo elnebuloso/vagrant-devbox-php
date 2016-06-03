@@ -4,13 +4,16 @@
 
 ansible-galaxy install --force elnebuloso.server-base,1.2.0
 ansible-galaxy install --force elnebuloso.php56-apache2,1.2.0
-ansible-galaxy install --force elnebuloso.docker,1.2.1
-ansible-galaxy install --force elnebuloso.docker-mysql,1.2.0
 ansible-galaxy install --force elnebuloso.ci,1.0.0
 ansible-galaxy install --force elnebuloso.ci-vcs,1.0.0
 ansible-galaxy install --force elnebuloso.ci-compass,1.0.0
 ansible-galaxy install --force elnebuloso.ci-jenkins,1.2.0
 ansible-galaxy install --force elnebuloso.ci-phing-commons,1.0.0
+ansible-galaxy install --force elnebuloso.docker,1.2.1
+ansible-galaxy install --force elnebuloso.docker-mysql,1.2.0
+ansible-galaxy install --force elnebuloso.docker-memcached,1.0.0
+ansible-galaxy install --force elnebuloso.docker-swagger-editor,1.0.0
+ansible-galaxy install --force elnebuloso.docker-swagger-generator,1.0.0
 
 # vendor roles
 ansible-galaxy install --force geerlingguy.composer,1.4.0
