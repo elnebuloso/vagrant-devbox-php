@@ -15,5 +15,6 @@ ansible-galaxy install --force elnebuloso.ci-phing-commons,1.0.0
 # vendor roles
 ansible-galaxy install --force carlosbuenosvinos.ansistrano-deploy,1.7.0
 ansible-galaxy install --force carlosbuenosvinos.ansistrano-rollback,1.4.1
+ansible-galaxy install --force geerlingguy.composer,1.4.0
 
 ################################################################################################
