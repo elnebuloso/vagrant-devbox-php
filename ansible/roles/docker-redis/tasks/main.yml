@@ -1,8 +1,0 @@
----
-- name: install container
-  docker:
-    name: "redis"
-    image: "redis:{{docker_redis_version}}"
-    state: "{{docker_redis_state}}"
-    ports:
-      - "6379:6379"
