@@ -7,6 +7,13 @@
   roles:
     - {role: elnebuloso.server-base}
     - {role: elnebuloso.php56-apache2}
-    # - {role: elnebuloso.docker}
-    # - {role: elnebuloso.docker-mysql}
-    # - {role: elnebuloso.ci-jenkins}
+    - {role: ansible-role-ci}
+    - {role: ansible-role-ci-vcs}
+    - {role: ansible-role-ci-compass}
+    - {role: ansible-role-ci-jenkins}
+    - {role: ansible-role-ci-phing-commons}
+    - {role: ansible-role-docker}
+    - {role: ansible-role-docker-mysql}
+    - {role: ansible-role-docker-memcached}
+    - {role: ansible-role-docker-swagger-editor}
+    - {role: ansible-role-docker-swagger-generator}
