@@ -2,6 +2,21 @@
 
 full stack php development box (rebuild)
 
+## features
+
+- ubuntu 14.04 LTS
+- ansible >= 2.0.0
+- php 5.6 + apache2
+- composer
+- continuous integration tools, e.g. optipng, jpegoptim, yui-compressor, closure-compiler, compass
+- phing, phing commons
+- jenkins ci server
+- docker
+- docker mysql
+- docker memcached
+- docker swagger-editor
+- docker swagger-generator
+
 ## requirements
 
 - VirtualBox >= 5.0.14
@@ -18,13 +33,13 @@ full stack php development box (rebuild)
 
 ## ansible provisioning
 
-### vagrant provisioning installing ansible roles
+### vagrant auto provisioning installing ansible roles
 
 ```
 sudo ansible-galaxy install -r /vagrant/ansible/install-roles.yml
 ```
 
-### vagrant provisioning running playbook 
+### vagrant auto provisioning ansible playbook 
 
 ```
 sudo ansible-playbook -i 'localhost,' -c local /vagrant/ansible/install.yml
@@ -59,12 +74,6 @@ sudo ansible-playbook -i 'localhost,' -c local /vagrant/ansible/install.yml
 - you can put your created private and public keys in dot/ssh/vagrant, so they will be used
 
 ## features (default settings and default role configurations)
-
-- php 5.6 + apache2
-- compass
-- composer
-- phing-commons
-- jenkins
 
 ### php 5.6 + apache2
 
