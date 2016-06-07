@@ -1,4 +1,4 @@
 .idea
-box.yml
 dot/ssh/*/**
 Vagrantfile
+vm.yml
