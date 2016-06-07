@@ -15,8 +15,8 @@
     - {role: elnebuloso.ci, when: enable_ci == true}
     - {role: elnebuloso.ci-vcs, when: enable_ci_vcs == true}
     - {role: elnebuloso.ci-compass, when: enable_ci_compass == true}
-    - {role: elnebuloso.ci-jenkins, when: enable_ci_jenkins == true}
-    - {role: elnebuloso.ci-phing-commons, when: enable_ci_phing_commons == true}
+    - {role: elnebuloso.ci-jenkins, when: enable_ci == true and enable_ci_vcs == true and enable_ci_jenkins == true}
+    - {role: elnebuloso.ci-phing-commons, when: enable_ci == true and enable_ci_vcs == true and enable_ci_phing_commons == true}
 
     # docker based roles
     - {role: elnebuloso.docker, when: enable_docker == true}

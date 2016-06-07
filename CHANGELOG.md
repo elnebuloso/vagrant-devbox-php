@@ -64,8 +64,8 @@
 
 ## 1.5.0
 
-* apache2 site for builds matched on vagrant_synced_folders /var/builds
-* apache2 site for releases matched on vagrant_synced_folders /var/releases
+* apache2 site for builds matched on vm_synced_folders /var/builds
+* apache2 site for releases matched on vm_synced_folders /var/releases
 
 ## 1.4.0
 
