@@ -1,6 +1,6 @@
 # vagrant-devbox-php
 
-full stack php development box
+full stack php development box (rebuild)
 
 ## requirements
 
