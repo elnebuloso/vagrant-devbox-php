@@ -1,6 +1,6 @@
 # vagrant-devbox-php
 
-full stack php development box through vagrant, ansible and docker
+full stack php development box
 
 ## requirements
 
@@ -23,7 +23,7 @@ full stack php development box through vagrant, ansible and docker
 ### global installed roles through ansible-galaxy
 
 * https://galaxy.ansible.com/elnebuloso/server-base/
-* https://galaxy.ansible.com/elnebuloso/php56-apache2/
+* https://galaxy.ansible.com/elnebuloso/php56/
 * https://galaxy.ansible.com/elnebuloso/ci/
 * https://galaxy.ansible.com/elnebuloso/ci-vcs/
 * https://galaxy.ansible.com/elnebuloso/ci-compass/
@@ -44,9 +44,3 @@ full stack php development box through vagrant, ansible and docker
   * id_rsa.ppk for putty pageant
 * if there is an existing folder dot/ssh/vagrant folder with private and public keys, then provisioning skips the creation
   * you can put your created private and public keys in dot/ssh/vagrant, so they will be used
-
-## running the ansible playbook over console
-
-```
-sudo ansible-playbook -i "localhost," -c local /vagrant/ansible/install.yml
-```
