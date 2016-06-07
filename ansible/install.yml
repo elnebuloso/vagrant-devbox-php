@@ -6,18 +6,21 @@
 
   roles:
     - {role: elnebuloso.server-base}
-    - {role: elnebuloso.php56, when: php56 == true}
 
-    # - {role: geerlingguy.composer}
+    # php based roles
+    - {role: elnebuloso.php56, when: enable_php56 == true}
+    - {role: geerlingguy.composer, when: enable_composer == true}
 
-    # - {role: elnebuloso.ci}
-    # - {role: elnebuloso.ci-vcs}
-    # - {role: elnebuloso.ci-compass}
-    # - {role: elnebuloso.ci-jenkins}
-    # - {role: elnebuloso.ci-phing-commons}
+    # ci based roles
+    - {role: elnebuloso.ci, when: enable_ci == true}
+    - {role: elnebuloso.ci-vcs, when: enable_ci_vcs == true}
+    - {role: elnebuloso.ci-compass, when: enable_ci_compass == true}
+    - {role: elnebuloso.ci-jenkins, when: enable_ci_jenkins == true}
+    - {role: elnebuloso.ci-phing-commons, when: enable_ci_phing_commons == true}
 
-    # - {role: elnebuloso.docker}
-    # - {role: elnebuloso.docker-mysql}
-    # - {role: elnebuloso.docker-memcached}
-    # - {role: elnebuloso.docker-swagger-editor}
-    # - {role: elnebuloso.docker-swagger-generator}
+    # docker based roles
+    - {role: elnebuloso.docker, when: enable_docker == true}
+    - {role: elnebuloso.docker-mysql, when: enable_docker == true and enable_docker_mysql == true}
+    - {role: elnebuloso.docker-memcached, when: enable_docker == true and enable_docker_memcached == true}
+    - {role: elnebuloso.docker-swagger-editor, when: enable_docker == true and enable_docker_swagger_editor == true}
+    - {role: elnebuloso.docker-swagger-generator, when: enable_docker == true and enable_docker_swagger_generator == true}
