@@ -1,4 +1,4 @@
 .idea
 ansible/vars/all.yml
-dot/ssh/*/**
+dot/
 vagrant.yml
