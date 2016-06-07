@@ -22,7 +22,8 @@ Vagrant.configure(2) do |config|
     config.vm.provision "shell", path: "provision/000-apt.sh"
     config.vm.provision "shell", path: "provision/001-keys.sh"
     config.vm.provision "shell", path: "provision/002-ansible.sh"
-    config.vm.provision "shell", path: "provision/003-ansible-galaxy.sh"
+    config.vm.provision "shell", inline: "sudo ansible-galaxy install -r /vagrant/ansible/install-roles.yml"
+    config.vm.provision "shell", inline: "sudo ansible-galaxy install -r /vagrant/ansible/install-roles.yml"
 
     setting['vagrant_synced_folders'].each do |i|
         config.vm.synced_folder i['host'], i['guest']

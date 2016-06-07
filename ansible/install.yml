@@ -6,12 +6,16 @@
 
   roles:
     - {role: elnebuloso.server-base}
-    - {role: elnebuloso.php56-apache2}
-    - {role: elnebuloso.ci}
-    - {role: elnebuloso.ci-vcs}
-    - {role: elnebuloso.ci-compass}
-    - {role: elnebuloso.ci-jenkins}
-    - {role: elnebuloso.ci-phing-commons}
+    - {role: elnebuloso.php56, when: php56 == true}
+
+    # - {role: geerlingguy.composer}
+
+    # - {role: elnebuloso.ci}
+    # - {role: elnebuloso.ci-vcs}
+    # - {role: elnebuloso.ci-compass}
+    # - {role: elnebuloso.ci-jenkins}
+    # - {role: elnebuloso.ci-phing-commons}
+
     # - {role: elnebuloso.docker}
     # - {role: elnebuloso.docker-mysql}
     # - {role: elnebuloso.docker-memcached}
