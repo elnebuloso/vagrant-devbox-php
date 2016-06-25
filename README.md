@@ -4,9 +4,9 @@ full stack php development box (rebuild)
 
 ## features
 
-- ubuntu 14.04 LTS
+- ubuntu 16.04 LTS
 - ansible >= 2.0.0
-- php 5.6 + apache2
+- php 7.0 + apache2
 - composer
 - continuous integration tools, e.g. optipng, jpegoptim, yui-compressor, closure-compiler, compass
 - phing, phing commons
@@ -19,8 +19,8 @@ full stack php development box (rebuild)
 
 ## requirements
 
-- VirtualBox >= 5.0.14
-- Vagrant >= 1.8.1
+- VirtualBox >= 5.0.22
+- Vagrant >= 1.8.4
 
 ### required vagrant plugins
 
@@ -48,7 +48,7 @@ sudo ansible-playbook -i 'localhost,' -c local /vagrant/ansible/install.yml
 ### global installed roles through ansible galaxy
 
 - https://galaxy.ansible.com/elnebuloso/server-base/
-- https://galaxy.ansible.com/elnebuloso/php56/
+- https://galaxy.ansible.com/elnebuloso/php70/
 - https://galaxy.ansible.com/elnebuloso/ci/
 - https://galaxy.ansible.com/elnebuloso/ci-vcs/
 - https://galaxy.ansible.com/elnebuloso/ci-compass/
@@ -75,7 +75,7 @@ sudo ansible-playbook -i 'localhost,' -c local /vagrant/ansible/install.yml
 
 ## features (default settings and default role configurations)
 
-### php 5.6 + apache2
+### php 7.0 + apache2
 
 - http://box.entwickl.de/
 - virtual document roots under /var/www/**

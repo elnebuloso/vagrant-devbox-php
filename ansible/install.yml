@@ -8,7 +8,7 @@
     - {role: elnebuloso.server-base}
 
     # php based roles
-    - {role: elnebuloso.php56, when: enable_php56 == true}
+    - {role: elnebuloso.php70, when: enable_php70 == true}
     - {role: geerlingguy.composer, when: enable_composer == true}
 
     # ci based roles

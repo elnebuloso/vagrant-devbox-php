@@ -1,5 +1,9 @@
 # changelog
 
+## 3.0.0
+
+- Ubuntu 16.04 + PHP 7.0
+
 ## 2.0.0
 
 - rebuilding, using ansible-galaxy for role exchange

@@ -1,6 +1,6 @@
 ---
 # enabling roles
-enable_php56: true
+enable_php70: true
 enable_composer: true
 enable_ci: true
 enable_ci_vcs: true
