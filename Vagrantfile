@@ -22,7 +22,7 @@ Vagrant.configure(2) do |config|
     config.vm.provision "shell", inline: "sudo rm /var/lib/dpkg/lock"
     config.vm.provision "shell", path: "provision/001-keys.sh"
     config.vm.provision "shell", path: "provision/002-ansible.sh"
-    config.vm.provision "shell", inline: "sudo ansible-galaxy install -r /vagrant/ansible/install-roles.yml"
+    config.vm.provision "shell", inline: "sudo ansible-galaxy install -f -r /vagrant/ansible/install-roles.yml"
     config.vm.provision "shell", inline: "sudo ansible-playbook -i 'localhost,' -c local /vagrant/ansible/install.yml"
 
     setting['vm_synced_folders'].each do |i|
