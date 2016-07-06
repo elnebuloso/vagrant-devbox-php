@@ -36,7 +36,7 @@ full stack php development box (rebuild)
 ### vagrant auto provisioning installing ansible roles
 
 ```
-sudo ansible-galaxy install -r /vagrant/ansible/install-roles.yml
+sudo ansible-galaxy install -f -r /vagrant/ansible/install-roles.yml
 ```
 
 ### vagrant auto provisioning ansible playbook 
