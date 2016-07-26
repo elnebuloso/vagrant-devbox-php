@@ -1,5 +1,10 @@
 # changelog
 
+## 3.0.2
+
+- updated ansible role elnebuloso.ci-phing-commons to 2.1.0
+- updated phing-commons default latest, through composer create-project
+
 ## 3.0.1
 
 - updated phing-commons to 9.3.2

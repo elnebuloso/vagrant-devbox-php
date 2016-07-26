@@ -13,8 +13,8 @@ enable_docker_memcached: true
 enable_docker_swagger_editor: true
 enable_docker_swagger_generator: true
 
-# elnebuloso.ci-phing-commons
-ci_phing_commons_version: "9.3.2"
+# elnebuloso.ci-phing-commons (latest)
+ci_phing_commons_version: ""
 
 # geerlingguy.composer
 composer_github_oauth_token: ""
