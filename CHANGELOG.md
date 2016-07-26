@@ -1,5 +1,9 @@
 # changelog
 
+## 3.0.1
+
+- updated phing-commons to 9.3.2
+
 ## 3.0.0
 
 - Ubuntu 16.04 + PHP 7.0
