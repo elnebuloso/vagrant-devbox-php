@@ -1,4 +1,5 @@
 .idea
+.vagrant
 ansible/vars/all.yml
 dot/
 vagrant.yml
