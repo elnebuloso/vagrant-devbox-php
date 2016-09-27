@@ -41,5 +41,5 @@
 - src: carlosbuenosvinos.ansistrano-deploy
   version: 1.7.0
 
-- src: carlosbuenosvinos.ansistrano-deploy
+- src: carlosbuenosvinos.ansistrano-rollback
   version: 1.4.1
