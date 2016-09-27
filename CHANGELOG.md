@@ -1,5 +1,9 @@
 # changelog
 
+## 3.0.3
+
+- fixed ansible role dependency of carlosbuenosvinos.ansistrano-rollback
+
 ## 3.0.2
 
 - updated ansible role elnebuloso.ci-phing-commons to 2.1.0
