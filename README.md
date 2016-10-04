@@ -1,6 +1,6 @@
 # vagrant-devbox-php
 
-full stack php development box (rebuild)
+full stack php development box
 
 ## features
 

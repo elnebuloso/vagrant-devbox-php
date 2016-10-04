@@ -1,5 +1,10 @@
 # changelog
 
+## 3.0.4
+
+- updated ansible role carlosbuenosvinos.ansistrano-deploy to 1.9.1
+- updated ansible role carlosbuenosvinos.ansistrano-rollback to 1.5.0
+
 ## 3.0.3
 
 - fixed ansible role dependency of carlosbuenosvinos.ansistrano-rollback
