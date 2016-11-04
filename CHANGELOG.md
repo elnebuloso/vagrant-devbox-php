@@ -1,5 +1,11 @@
 # changelog
 
+## 3.1.0
+
+- added base role for apt-upgrade (configurable)
+- updated ansible roles elnebuloso.* to latest
+- updated ansible role geerlingguy.composer to 1.5.0
+
 ## 3.0.4
 
 - updated ansible role carlosbuenosvinos.ansistrano-deploy to 1.9.1

@@ -20,10 +20,7 @@ full stack php development box
 ## requirements
 
 - VirtualBox >= 5.0.22
-- Vagrant >= 1.8.4
-
-### required vagrant plugins
-
+- vagrant >= 1.8.4
 - vagrant plugin install vagrant-vbguest
 
 ## setup
@@ -36,13 +33,13 @@ full stack php development box
 ### vagrant auto provisioning installing ansible roles
 
 ```
-sudo ansible-galaxy install -f -r /vagrant/ansible/install-roles.yml
+sudo ansible-galaxy install -f -r /vagrant/ansible/.roles.yml
 ```
 
 ### vagrant auto provisioning ansible playbook 
 
 ```
-sudo ansible-playbook -i 'localhost,' -c local /vagrant/ansible/install.yml
+sudo ansible-playbook -i 'localhost,' -c local /vagrant/ansible/provision.yml
 ```
 
 ### global installed roles through ansible galaxy

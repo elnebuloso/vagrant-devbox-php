@@ -1,42 +1,19 @@
 ---
 - src: elnebuloso.server-base
-  version: 2.0.0
-
 - src: elnebuloso.php70
-  version: 1.1.0
-
 - src: elnebuloso.ci
-  version: 2.0.0
-
 - src: elnebuloso.ci-vcs
-  version: 2.0.0
-
 - src: elnebuloso.ci-compass
-  version: 2.0.0
-
 - src: elnebuloso.ci-jenkins
-  version: 2.0.0
-
 - src: elnebuloso.ci-phing-commons
-  version: 2.1.0
-
 - src: elnebuloso.docker
-  version: 2.0.0
-
 - src: elnebuloso.docker-mysql
-  version: 1.2.0
-
 - src: elnebuloso.docker-memcached
-  version: 1.0.0
-
 - src: elnebuloso.docker-swagger-editor
-  version: 2.0.0
-
 - src: elnebuloso.docker-swagger-generator
-  version: 2.0.0
 
 - src: geerlingguy.composer
-  version: 1.4.0
+  version: 1.5.0
 
 - src: carlosbuenosvinos.ansistrano-deploy
   version: 1.9.1
