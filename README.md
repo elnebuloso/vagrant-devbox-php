@@ -7,10 +7,9 @@ full stack php development box
 - ubuntu 16.04 LTS
 - ansible >= 2.0.0
 - php 7.0 + apache2
-- composer
+- php phing and commons
+- php composer
 - continuous integration tools, e.g. optipng, jpegoptim, yui-compressor, closure-compiler, compass
-- phing, phing commons
-- jenkins ci server
 - docker
 - docker mysql
 - docker memcached
@@ -49,7 +48,6 @@ sudo ansible-playbook -i 'localhost,' -c local /vagrant/ansible/provision.yml
 - https://galaxy.ansible.com/elnebuloso/ci/
 - https://galaxy.ansible.com/elnebuloso/ci-vcs/
 - https://galaxy.ansible.com/elnebuloso/ci-compass/
-- https://galaxy.ansible.com/elnebuloso/ci-jenkins/
 - https://galaxy.ansible.com/elnebuloso/ci-phing-commons/
 - https://galaxy.ansible.com/elnebuloso/docker/
 - https://galaxy.ansible.com/elnebuloso/docker-mysql/
@@ -77,10 +75,6 @@ sudo ansible-playbook -i 'localhost,' -c local /vagrant/ansible/provision.yml
 - http://box.entwickl.de/
 - virtual document roots under /var/www/**
 - each directory that has a public folder e.g. /var/www/foo/public/index.php can be called e.g. http://foo.box.entwickl.de/
-
-### jenkins
-
-- http://jenkins.box.entwickl.de/
 
 ### docker
 

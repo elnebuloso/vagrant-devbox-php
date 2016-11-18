@@ -1,5 +1,5 @@
 ---
-devbox_base_apt_upgrade: "yes"
+devbox_base_apt_upgrade: "dist"
 
 # enabling roles
 enable_php70: true
@@ -7,7 +7,6 @@ enable_composer: true
 enable_ci: true
 enable_ci_vcs: true
 enable_ci_compass: true
-enable_ci_jenkins: true
 enable_ci_phing_commons: true
 enable_docker: true
 enable_docker_mysql: true
