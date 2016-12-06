@@ -1,6 +1,4 @@
 ---
-devbox_base_apt_upgrade: "dist"
-
 # enabling roles
 enable_php70: true
 enable_composer: true

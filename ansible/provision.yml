@@ -5,7 +5,6 @@
     - vars/all.yml
 
   roles:
-    - {role: base}
     - {role: elnebuloso.server-base}
 
     # php based roles

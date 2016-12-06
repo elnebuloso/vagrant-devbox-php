@@ -19,7 +19,7 @@ Vagrant.configure(2) do |config|
     config.vbguest.auto_update = setting['vm_vbguest_auto_update']
     config.vbguest.no_remote = setting['vm_vbguest_no_remote']
 
-    config.vm.provision "shell", inline: "sudo rm /var/lib/dpkg/lock"
+    config.vm.provision "shell", inline: "sudo rm -f /var/lib/dpkg/lock"
     config.vm.provision "shell", path: "provision/001-keys.sh"
     config.vm.provision "shell", path: "provision/002-ansible.sh"
     config.vm.provision "shell", inline: "sudo ansible-galaxy install -f -r /vagrant/ansible/.roles.yml"

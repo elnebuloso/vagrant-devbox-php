@@ -1,5 +1,11 @@
 # changelog
 
+## 3.2.0
+
+- removed base role for apt-upgrade (configurable)
+- base role for apt-upgrade now provided by ansible role https://github.com/elnebuloso/ansible-role-server-base:2.2.0
+- bugfixes
+
 ## 3.1.0
 
 - added base role for apt-upgrade (configurable)
