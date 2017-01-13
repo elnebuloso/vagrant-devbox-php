@@ -1,6 +1,6 @@
 # changelog
 
-## 3.2.0
+## 3.2.0, 3.3.0
 
 - ansible roles defined by specific versions
 - renamed provision playbook
