@@ -14,16 +14,23 @@ Vagrant.configure(2) do |config|
     config.vm.provider "virtualbox" do |v|
         v.memory = setting['vm_memory']
         v.cpus = setting['vm_cpus']
+
+        # on windows, vagrant must run with administrator rights to use symlinks
+        v.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
     end
 
     config.vbguest.auto_update = setting['vm_vbguest_auto_update']
     config.vbguest.no_remote = setting['vm_vbguest_no_remote']
 
-    config.vm.provision "shell", inline: "sudo rm /var/lib/dpkg/lock"
+    config.vm.provision "shell", inline: "sudo rm -f /var/lib/dpkg/lock"
     config.vm.provision "shell", path: "provision/001-keys.sh"
     config.vm.provision "shell", path: "provision/002-ansible.sh"
-    config.vm.provision "shell", inline: "sudo ansible-galaxy install -f -r /vagrant/ansible/.roles.yml"
-    config.vm.provision "shell", inline: "sudo ansible-playbook -i 'localhost,' -c local /vagrant/ansible/provision.yml"
+
+    config.vm.provision "shell", inline: "ln -nsf /vagrant/provision/box.sh /usr/local/bin/box"
+    config.vm.provision "shell", inline: "ln -nsf /vagrant/provision/box-roles.sh /usr/local/bin/box-roles"
+
+    config.vm.provision "shell", inline: "sudo box-roles"
+    config.vm.provision "shell", inline: "sudo box"
 
     setting['vm_synced_folders'].each do |i|
         config.vm.synced_folder i['host'], i['guest']

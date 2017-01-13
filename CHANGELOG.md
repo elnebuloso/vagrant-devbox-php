@@ -1,5 +1,13 @@
 # changelog
 
+## 3.2.0
+
+- ansible roles defined by specific versions
+- renamed provision playbook
+- added virtualbox config for symlinks
+- added shortcut box (ansible provisioning)
+- added shortcut box-roles (ansible roles)
+
 ## 3.1.0
 
 - added base role for apt-upgrade (configurable)

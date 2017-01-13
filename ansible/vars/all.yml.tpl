@@ -1,6 +1,4 @@
 ---
-devbox_base_apt_upgrade: "dist"
-
 # enabling roles
 enable_php70: true
 enable_composer: true
@@ -14,7 +12,10 @@ enable_docker_memcached: true
 enable_docker_swagger_editor: true
 enable_docker_swagger_generator: true
 
-# elnebuloso.ci-phing-commons (latest)
+# elnebuloso.server-base
+server_base_apt_upgrade: "dist"
+
+# elnebuloso.ci-phing-commons
 ci_phing_commons_version: ""
 
 # geerlingguy.composer

@@ -32,13 +32,13 @@ full stack php development box
 ### vagrant auto provisioning installing ansible roles
 
 ```
-sudo ansible-galaxy install -f -r /vagrant/ansible/.roles.yml
+sudo box-roles
 ```
 
 ### vagrant auto provisioning ansible playbook 
 
 ```
-sudo ansible-playbook -i 'localhost,' -c local /vagrant/ansible/provision.yml
+sudo box
 ```
 
 ### global installed roles through ansible galaxy
