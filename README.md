@@ -6,7 +6,7 @@ full stack php development box
 
 - ubuntu 16.04 LTS
 - ansible >= 2.2.0
-- php 7.0 + apache2
+- php 7.1 + apache2
 - php phing and commons
 - php composer
 - continuous integration tools, e.g. optipng, jpegoptim, yui-compressor, closure-compiler, compass
