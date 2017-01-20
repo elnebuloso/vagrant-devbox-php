@@ -10,9 +10,9 @@
     - {role: geerlingguy.ntp, tags: ['system', 'system.ntp']}
 
     # php based roles
-    - {role: elnebuloso.php70, tags: ['php']}
-    - {role: geerlingguy.composer, tags: ['php', 'php.composer']}
-    - {role: elnebuloso.ci-phing-commons, tags: ['ci', 'ci.phing']}
+    - {role: elnebuloso.php71, tags: ['php']}
+    - {role: geerlingguy.composer, tags: ['php', 'php.composer', 'php.phing']}
+    - {role: elnebuloso.ci-phing-commons, tags: ['php', 'ci.composer', 'php.phing']}
 
     # ci based roles
     - {role: elnebuloso.ci, tags: ['ci', 'ci.base']}
@@ -22,8 +22,8 @@
     - {role: ocha.yarn, tags: ['ci', 'ci.yarn']}
 
     # docker based roles
-    - {role: elnebuloso.docker, tags: ['docker']}
-    - {role: elnebuloso.docker-mysql, tags: ['docker', 'docker.mysql']}
-    - {role: elnebuloso.docker-memcached, tags: ['docker', 'docker.memcached']}
-    - {role: elnebuloso.docker-swagger-editor, tags: ['docker', 'docker.swagger', 'docker.swagger.editor']}
-    - {role: elnebuloso.docker-swagger-generator, tags: ['docker', 'docker.swagger', 'docker.swagger.generator']}
+    # - {role: elnebuloso.docker, tags: ['docker']}
+    # - {role: elnebuloso.docker-mysql, tags: ['docker', 'docker.mysql']}
+    # - {role: elnebuloso.docker-memcached, tags: ['docker', 'docker.memcached']}
+    # - {role: elnebuloso.docker-swagger-editor, tags: ['docker', 'docker.swagger', 'docker.swagger.editor']}
+    # - {role: elnebuloso.docker-swagger-generator, tags: ['docker', 'docker.swagger', 'docker.swagger.generator']}
