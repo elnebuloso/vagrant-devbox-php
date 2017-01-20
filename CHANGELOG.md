@@ -1,5 +1,16 @@
 # changelog
 
+## 3.4.0
+
+- ansible >= 2.2.0
+- shortcut box added added $@ for ansible-playbook arguments
+- shortcut box-roles added argument: force|forced
+- update elnebuloso.server-base@2.4.0
+- new role geerlingguy.ntp
+- new role geerlingguy.nodejs
+- new role ocha.yarn
+- removed enabling roles, using tags
+
 ## 3.2.0, 3.3.0
 
 - ansible roles defined by specific versions

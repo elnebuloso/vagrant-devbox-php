@@ -5,7 +5,7 @@ full stack php development box
 ## features
 
 - ubuntu 16.04 LTS
-- ansible >= 2.0.0
+- ansible >= 2.2.0
 - php 7.0 + apache2
 - php phing and commons
 - php composer
@@ -33,12 +33,15 @@ full stack php development box
 
 ```
 sudo box-roles
+sudo box-roles force
 ```
 
 ### vagrant auto provisioning ansible playbook 
 
 ```
 sudo box
+sudo box --tags "system"
+sudo box --skip-tags "system"
 ```
 
 ### global installed roles through ansible galaxy

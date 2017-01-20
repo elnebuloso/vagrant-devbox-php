@@ -5,21 +5,25 @@
     - vars/all.yml
 
   roles:
-    - {role: elnebuloso.server-base}
+    # system roles
+    - {role: elnebuloso.server-base, tags: ['system']}
+    - {role: geerlingguy.ntp, tags: ['system', 'system.ntp']}
 
     # php based roles
-    - {role: elnebuloso.php70, when: enable_php70 == true}
-    - {role: geerlingguy.composer, when: enable_composer == true}
+    - {role: elnebuloso.php70, tags: ['php']}
+    - {role: geerlingguy.composer, tags: ['php', 'php.composer']}
+    - {role: elnebuloso.ci-phing-commons, tags: ['ci', 'ci.phing']}
 
     # ci based roles
-    - {role: elnebuloso.ci, when: enable_ci == true}
-    - {role: elnebuloso.ci-vcs, when: enable_ci_vcs == true}
-    - {role: elnebuloso.ci-compass, when: enable_ci_compass == true}
-    - {role: elnebuloso.ci-phing-commons, when: enable_ci == true and enable_ci_vcs == true and enable_ci_phing_commons == true}
+    - {role: elnebuloso.ci, tags: ['ci', 'ci.base']}
+    - {role: elnebuloso.ci-vcs, tags: ['ci', 'ci.vcs']}
+    - {role: elnebuloso.ci-compass, tags: ['ci', 'ci.compass']}
+    - {role: geerlingguy.nodejs, tags: ['ci', 'ci.nodejs']}
+    - {role: ocha.yarn, tags: ['ci', 'ci.yarn']}
 
     # docker based roles
-    - {role: elnebuloso.docker, when: enable_docker == true}
-    - {role: elnebuloso.docker-mysql, when: enable_docker == true and enable_docker_mysql == true}
-    - {role: elnebuloso.docker-memcached, when: enable_docker == true and enable_docker_memcached == true}
-    - {role: elnebuloso.docker-swagger-editor, when: enable_docker == true and enable_docker_swagger_editor == true}
-    - {role: elnebuloso.docker-swagger-generator, when: enable_docker == true and enable_docker_swagger_generator == true}
+    - {role: elnebuloso.docker, tags: ['docker']}
+    - {role: elnebuloso.docker-mysql, tags: ['docker', 'docker.mysql']}
+    - {role: elnebuloso.docker-memcached, tags: ['docker', 'docker.memcached']}
+    - {role: elnebuloso.docker-swagger-editor, tags: ['docker', 'docker.swagger', 'docker.swagger.editor']}
+    - {role: elnebuloso.docker-swagger-generator, tags: ['docker', 'docker.swagger', 'docker.swagger.generator']}
