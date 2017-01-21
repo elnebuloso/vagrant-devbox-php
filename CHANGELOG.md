@@ -15,6 +15,7 @@
 - new role ocha.yarn
 - removed enabling roles, using tags
 - removed role elnebuloso.docker, replaced with angstwad.docker_ubuntu
+- update php7.1
 
 ## 3.2.0, 3.3.0
 
