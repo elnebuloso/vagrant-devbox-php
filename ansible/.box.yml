@@ -22,7 +22,7 @@
     - {role: ocha.yarn, tags: ['ci', 'ci.yarn']}
 
     # docker based roles
-    # - {role: elnebuloso.docker, tags: ['docker']}
+    - {role: angstwad.docker_ubuntu, tags: ['docker']}
     # - {role: elnebuloso.docker-mysql, tags: ['docker', 'docker.mysql']}
     # - {role: elnebuloso.docker-memcached, tags: ['docker', 'docker.memcached']}
     # - {role: elnebuloso.docker-swagger-editor, tags: ['docker', 'docker.swagger', 'docker.swagger.editor']}

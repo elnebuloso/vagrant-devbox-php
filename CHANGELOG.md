@@ -6,10 +6,15 @@
 - shortcut box added added $@ for ansible-playbook arguments
 - shortcut box-roles added argument: force|forced
 - update elnebuloso.server-base@2.4.0
+- update elnebuloso.docker-mysql@1.3.0
+- update elnebuloso.docker-memcached@1.1.0
+- update elnebuloso.docker-swagger-editor@2.1.0
+- update elnebuloso.docker-swagger-generator@2.1.0
 - new role geerlingguy.ntp
 - new role geerlingguy.nodejs
 - new role ocha.yarn
 - removed enabling roles, using tags
+- removed role elnebuloso.docker, replaced with angstwad.docker_ubuntu
 
 ## 3.2.0, 3.3.0
 
