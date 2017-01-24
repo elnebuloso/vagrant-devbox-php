@@ -7,6 +7,7 @@
   roles:
     # system roles
     - {role: elnebuloso.server-base, tags: ['system']}
+    - {role: elnebuloso.pip, tags: ['system', 'system.pip']}
     - {role: geerlingguy.ntp, tags: ['system', 'system.ntp']}
 
     # php based roles
@@ -22,8 +23,8 @@
     - {role: ocha.yarn, tags: ['ci', 'ci.yarn']}
 
     # docker based roles
-    - {role: angstwad.docker_ubuntu, tags: ['docker']}
-    # - {role: elnebuloso.docker-mysql, tags: ['docker', 'docker.mysql']}
-    # - {role: elnebuloso.docker-memcached, tags: ['docker', 'docker.memcached']}
-    # - {role: elnebuloso.docker-swagger-editor, tags: ['docker', 'docker.swagger', 'docker.swagger.editor']}
-    # - {role: elnebuloso.docker-swagger-generator, tags: ['docker', 'docker.swagger', 'docker.swagger.generator']}
+    - {role: elnebuloso.docker, tags: ['docker', 'docker']}
+    - {role: elnebuloso.docker-mysql, tags: ['docker', 'docker.mysql']}
+    - {role: elnebuloso.docker-memcached, tags: ['docker', 'docker.memcached']}
+    - {role: elnebuloso.docker-swagger-editor, tags: ['docker', 'docker.swagger', 'docker.swagger.editor']}
+    - {role: elnebuloso.docker-swagger-generator, tags: ['docker', 'docker.swagger', 'docker.swagger.generator']}
