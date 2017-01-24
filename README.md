@@ -18,8 +18,8 @@ full stack php development box
 
 ## requirements
 
-- VirtualBox >= 5.0.22
-- vagrant >= 1.8.4
+- VirtualBox >= 5.1.0
+- vagrant >= 1.9.1
 - vagrant plugin install vagrant-vbguest
 
 ## setup
@@ -47,6 +47,7 @@ sudo box --skip-tags "system"
 ### global installed roles through ansible galaxy
 
 - https://galaxy.ansible.com/elnebuloso/server-base/
+- https://galaxy.ansible.com/elnebuloso/pip/
 - https://galaxy.ansible.com/elnebuloso/php70/
 - https://galaxy.ansible.com/elnebuloso/ci/
 - https://galaxy.ansible.com/elnebuloso/ci-vcs/
@@ -58,8 +59,9 @@ sudo box --skip-tags "system"
 - https://galaxy.ansible.com/elnebuloso/docker-swagger-editor/
 - https://galaxy.ansible.com/elnebuloso/docker-swagger-generator/
 - https://galaxy.ansible.com/geerlingguy/composer/
-- https://galaxy.ansible.com/carlosbuenosvinos/ansistrano-deploy/
-- https://galaxy.ansible.com/carlosbuenosvinos/ansistrano-rollback/
+- https://galaxy.ansible.com/geerlingguy/nodejs/
+- https://galaxy.ansible.com/geerlingguy/ntp/
+- https://galaxy.ansible.com/ocha/yarn/
 
 ## connecting the box over ssh
 
@@ -73,7 +75,7 @@ sudo box --skip-tags "system"
 
 ## features (default settings and default role configurations)
 
-### php 7.0 + apache2
+### php 7.1 + apache2
 
 - http://box.entwickl.de/
 - virtual document roots under /var/www/**
