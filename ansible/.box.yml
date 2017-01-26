@@ -12,13 +12,13 @@
 
     # php based roles
     - {role: elnebuloso.php71, tags: ['php']}
-    - {role: geerlingguy.composer, tags: ['php', 'php.composer', 'php.phing']}
-    - {role: elnebuloso.ci-phing-commons, tags: ['php', 'ci.composer', 'php.phing']}
+    - {role: geerlingguy.composer, tags: ['php', 'php.composer']}
 
     # ci based roles
     - {role: elnebuloso.ci, tags: ['ci', 'ci.base']}
     - {role: elnebuloso.ci-vcs, tags: ['ci', 'ci.vcs']}
     - {role: elnebuloso.ci-compass, tags: ['ci', 'ci.compass']}
+    - {role: elnebuloso.ci-phing-commons, tags: ['ci', 'ci.composer', 'php']}
     - {role: geerlingguy.nodejs, tags: ['ci', 'ci.nodejs']}
     - {role: ocha.yarn, tags: ['ci', 'ci.yarn']}
 

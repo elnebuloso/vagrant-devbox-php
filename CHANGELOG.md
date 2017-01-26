@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
+## [3.6.0] - 2017-01-26
+### Added
+
+### Changed
+
+- updated ansible role elnebuloso.ci-phing-commons 2.2.0, tarball install
+
 ## [3.5.0] - 2017-01-24
 ### Added
 
