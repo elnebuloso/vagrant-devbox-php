@@ -9,6 +9,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
+## [3.7.0] - 2017-01-31
+### Added
+
+- elnebuloso.docker-portainer 1.1.0
+
+### Changed
+
+- installing ansible over pip
+- installing pip docker-py
+- installing pip docker-compose
+- elnebuloso.server-base 2.5.0
+- elnebuloso.docker 2.4.0
+- elnebuloso.pip 1.1.0
+
 ## [3.6.0] - 2017-01-26
 ### Added
 

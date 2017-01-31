@@ -24,6 +24,7 @@
 
     # docker based roles
     - {role: elnebuloso.docker, tags: ['docker', 'docker']}
+    - {role: elnebuloso.docker-portainer, tags: ['docker', 'docker.portainer']}
     - {role: elnebuloso.docker-mysql, tags: ['docker', 'docker.mysql']}
     - {role: elnebuloso.docker-memcached, tags: ['docker', 'docker.memcached']}
     - {role: elnebuloso.docker-swagger-editor, tags: ['docker', 'docker.swagger', 'docker.swagger.editor']}

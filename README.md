@@ -54,6 +54,7 @@ sudo box --skip-tags "system"
 - https://galaxy.ansible.com/elnebuloso/ci-compass/
 - https://galaxy.ansible.com/elnebuloso/ci-phing-commons/
 - https://galaxy.ansible.com/elnebuloso/docker/
+- https://galaxy.ansible.com/elnebuloso/docker-portainer/
 - https://galaxy.ansible.com/elnebuloso/docker-mysql/
 - https://galaxy.ansible.com/elnebuloso/docker-memcached/
 - https://galaxy.ansible.com/elnebuloso/docker-swagger-editor/
@@ -82,6 +83,11 @@ sudo box --skip-tags "system"
 - each directory that has a public folder e.g. /var/www/foo/public/index.php can be called e.g. http://foo.box.entwickl.de/
 
 ### docker
+
+#### docker portainer
+
+- http://box.entwickl.de:9000
+- https://hub.docker.com/r/portainer/portainer/
 
 #### docker mysql
 
