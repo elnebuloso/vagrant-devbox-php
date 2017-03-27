@@ -27,9 +27,9 @@ Vagrant.configure(2) do |config|
     config.vm.provision "shell", path: "provision/002-ansible.sh"
 
     config.vm.provision "shell", inline: "ln -nsf /vagrant/provision/box.sh /usr/local/bin/box"
+    config.vm.provision "shell", inline: "ln -nsf /vagrant/provision/box-playbook.sh /usr/local/bin/box-playbook"
     config.vm.provision "shell", inline: "ln -nsf /vagrant/provision/box-roles.sh /usr/local/bin/box-roles"
 
-    config.vm.provision "shell", inline: "sudo box-roles forced"
     config.vm.provision "shell", inline: "sudo box"
 
     setting['vm_synced_folders'].each do |i|

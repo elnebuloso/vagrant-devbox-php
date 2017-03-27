@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
+
+## [3.8.0] - 2017-03-27
+### Changed
+
+- elnebuloso.docker 2.5.0
+- shortcut scripts update running playbooks and roles
+
+
 ## [3.7.0] - 2017-01-31
 ### Added
 
@@ -23,12 +31,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - elnebuloso.docker 2.4.0
 - elnebuloso.pip 1.1.0
 
+
 ## [3.6.0] - 2017-01-26
 ### Added
 
 ### Changed
 
 - updated ansible role elnebuloso.ci-phing-commons 2.2.0, tarball install
+
 
 ## [3.5.0] - 2017-01-24
 ### Added
@@ -42,6 +52,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - removed ansible role carlosbuenosvinos.ansistrano-deploy
 - removed ansible role carlosbuenosvinos.ansistrano-rollback
   
+
 ## [3.4.0]
 ### Added
 
@@ -62,6 +73,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - removed role elnebuloso.docker, replaced with angstwad.docker_ubuntu
 - update php7.1
 
+
 ## [3.3.0]
 ## [3.2.0]
 ### Added
@@ -74,6 +86,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - added shortcut box (ansible provisioning)
 - added shortcut box-roles (ansible roles)
 
+
 ## [3.1.0]
 ### Added
 
@@ -84,6 +97,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - updated ansible role geerlingguy.composer to 1.5.0
 - updated ansible role carlosbuenosvinos.ansistrano-deploy 1.11.0
 
+
 ## [3.0.4]
 ### Added
 
@@ -92,12 +106,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - updated ansible role carlosbuenosvinos.ansistrano-deploy to 1.9.1
 - updated ansible role carlosbuenosvinos.ansistrano-rollback to 1.5.0
 
+
 ## [3.0.3]
 ### Added
 
 ### Changed
 
 - fixed ansible role dependency of carlosbuenosvinos.ansistrano-rollback
+
 
 ## [3.0.2]
 ### Added
@@ -107,12 +123,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - updated ansible role elnebuloso.ci-phing-commons to 2.1.0
 - updated phing-commons default latest, through composer create-project
 
+
 ## [3.0.1]
 ### Added
 
 ### Changed
 
 - updated phing-commons to 9.3.2
+
 
 ## [3.0.0]
 ### Added
@@ -121,12 +139,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Ubuntu 16.04 + PHP 7.0
 
+
 ## [2.0.0]
 ### Added
 
 ### Changed
 
 - rebuilding, using ansible-galaxy for role exchange
+
 
 ## [1.13.1]
 ## [1.13.0]
@@ -136,6 +156,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - docker swagger-editor
 - docker swagger-generator
+
 
 ## [1.12.0]
 ### Added
@@ -147,6 +168,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - npm latest
 - npm bower fix bower ESUDO Cannot be run with sudo using default .bowerrc for root and jenkins user
 
+
 ## [1.11.0]
 ### Added
 
@@ -155,6 +177,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - configuration update
 - removed ansible-semaphore
 
+
 ## [1.9.4]
 ## [1.9.3]
 ### Added
@@ -162,6 +185,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 
 - different cleanup code
+
 
 ## [1.9.2]
 ### Added
@@ -172,6 +196,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - bugfix composer-phing-commons for jenkins if jenkins is not existing
 - commented out optional vagrant plugin vagrant-vbguest, fails if not existing
 
+
 ## [1.9.1]
 ### Added
 
@@ -180,6 +205,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - removed config.vm.synced_folder type nfs from Vagrantfile, problems installing over ubuntu
 - The type of synced folder. If this is not specified, Vagrant will automatically choose the best synced folder option for your environment.
 - moved 
+
 
 ## [1.9.0]
 ### Added
@@ -196,12 +222,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - added ansible/config folder for user defined settings
 - updated all docker container installations
 
+
 ## [1.8.0]
 ### Added
 
 ### Changed
 
 - update composer-phing-commons to 9.2.0
+
 
 ## [1.7.0]
 ### Added
@@ -211,12 +239,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - update composer-phing-commons to 9.1.0
 - update to php 5.6
 
+
 ## [1.6.0]
 ### Added
 
 ### Changed
 
 - update composer-phing-commons to 9.0.0
+
 
 ## [1.5.0]
 ### Added
@@ -226,12 +256,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - apache2 site for builds matched on vm_synced_folders /var/builds
 - apache2 site for releases matched on vm_synced_folders /var/releases
 
+
 ## [1.4.0]
 ### Added
 
 ### Changed
 
 - update composer-phing-commons to 8.11.0
+
 
 ## [1.3.0]
 ### Added
@@ -240,6 +272,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - update composer-phing-commons to 8.10.0
 
+
 ## [1.2.0]
 ### Added
 
@@ -247,6 +280,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - removed public_network settings from Vagrantfile
 - update dependencies of composer-phing-commons
+
 
 ## [1.1.0]
 ### Added

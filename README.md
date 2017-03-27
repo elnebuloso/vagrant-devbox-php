@@ -29,6 +29,12 @@ full stack php development box
 
 ## ansible provisioning
 
+### vagrant auto provisioning with roles and playbook
+
+```
+sudo box
+```
+
 ### vagrant auto provisioning installing ansible roles
 
 ```
@@ -39,9 +45,9 @@ sudo box-roles force
 ### vagrant auto provisioning ansible playbook 
 
 ```
-sudo box
-sudo box --tags "system"
-sudo box --skip-tags "system"
+sudo box-playbook
+sudo box-playbook --tags "system"
+sudo box-playbook --skip-tags "system"
 ```
 
 ### global installed roles through ansible galaxy
