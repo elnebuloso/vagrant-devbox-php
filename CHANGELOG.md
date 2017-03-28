@@ -10,6 +10,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 
 
+## [3.9.0] - 2017-03-28
+### Changed
+
+- elnebuloso.server-base 2.6.0
+- elnebuloso.docker 2.7.0
+
+
 ## [3.8.0] - 2017-03-27
 ### Changed
 

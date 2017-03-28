@@ -1,6 +1,14 @@
 ---
 # elnebuloso.server-base
+# values can be: dist, full, safe
 server_base_apt_upgrade: ""
+
+# values can be: yes, no
+server_base_install_linux_image_extra: "no"
+
+# elnebuloso.docker
+# values can be: yes, no
+docker_install_docker_py: "yes"
 
 # elnebuloso.ci-phing-commons
 ci_phing_commons_version: ""
@@ -14,9 +22,4 @@ composer_github_oauth_token: ""
 # geerlingguy.nodejs
 nodejs_version: "6.x"
 nodejs_install_npm_user: "root"
-nodejs_npm_global_packages:
-  - name: gulp
-  - name: grunt
-  - name: grunt-cli
-  - name: bower
-  - name: browserfy
+nodejs_npm_global_packages: []
