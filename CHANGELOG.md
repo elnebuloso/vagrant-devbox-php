@@ -10,6 +10,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 
 
+## [3.10.0] - 2017-04-21
+### Changed
+
+- elnebuloso.docker 2.8.0
+- updated box-play
+- updated box-roles
+- removed vagrant config cpu
+- removed vagrant config memory
+
+
 ## [3.9.0] - 2017-03-28
 ### Changed
 

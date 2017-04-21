@@ -3,9 +3,6 @@ vm_hostname: "box.entwickl.de"
 vm_public_network: "192.168.178.100"
 vm_private_network: "192.168.33.100"
 
-vm_memory: 1024
-vm_cpus: 1
-
 vm_vbguest_auto_update: false
 vm_vbguest_no_remote: true
 

@@ -2,6 +2,6 @@
 
 ################################################################################################
 
-ansible-playbook -i 'localhost,' -c local /vagrant/ansible/.box.yml $@
+sudo ansible-playbook -i 'localhost,' -c local /vagrant/ansible/.box.yml $@
 
 ################################################################################################

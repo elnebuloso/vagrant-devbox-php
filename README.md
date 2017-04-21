@@ -45,16 +45,16 @@ sudo box-roles force
 ### vagrant auto provisioning ansible playbook 
 
 ```
-sudo box-playbook
-sudo box-playbook --tags "system"
-sudo box-playbook --skip-tags "system"
+sudo box-play
+sudo box-play --tags "system"
+sudo box-play --skip-tags "system"
 ```
 
 ### global installed roles through ansible galaxy
 
 - https://galaxy.ansible.com/elnebuloso/server-base/
 - https://galaxy.ansible.com/elnebuloso/pip/
-- https://galaxy.ansible.com/elnebuloso/php70/
+- https://galaxy.ansible.com/elnebuloso/php71/
 - https://galaxy.ansible.com/elnebuloso/ci/
 - https://galaxy.ansible.com/elnebuloso/ci-vcs/
 - https://galaxy.ansible.com/elnebuloso/ci-compass/

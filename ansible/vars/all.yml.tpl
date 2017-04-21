@@ -8,7 +8,7 @@ server_base_install_linux_image_extra: "no"
 
 # elnebuloso.docker
 # values can be: yes, no
-docker_install_docker_py: "yes"
+docker_install_docker_python: "yes"
 
 # elnebuloso.ci-phing-commons
 ci_phing_commons_version: ""
