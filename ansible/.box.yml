@@ -11,7 +11,7 @@
     - {role: geerlingguy.ntp, tags: ['system', 'system.ntp']}
 
     # php based roles
-    - {role: elnebuloso.php71, tags: ['php']}
+    - {role: elnebuloso.php71, tags: ['php', 'php.composer']}
     - {role: geerlingguy.composer, tags: ['php', 'php.composer']}
 
     # ci based roles
@@ -23,7 +23,7 @@
     - {role: ocha.yarn, tags: ['ci', 'ci.yarn']}
 
     # docker based roles
-    - {role: elnebuloso.docker, tags: ['docker', 'docker']}
+    - {role: elnebuloso.docker, tags: ['docker', 'docker', 'docker.portainer', 'docker.mysql', 'docker.memcached', 'docker.swagger.editor', 'docker.swagger.generator']}
     - {role: elnebuloso.docker-portainer, tags: ['docker', 'docker.portainer']}
     - {role: elnebuloso.docker-mysql, tags: ['docker', 'docker.mysql']}
     - {role: elnebuloso.docker-memcached, tags: ['docker', 'docker.memcached']}

@@ -4,10 +4,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) 
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
-### Added
 
+## [3.11.0] - 2017-04-22
 ### Changed
+- elnebuloso.server-base version: 2.7.0
+- elnebuloso.pip version: 1.2.0
+- elnebuloso.php71 version: 1.2.0
+- elnebuloso.ci version: 2.1.0
+- elnebuloso.ci-vcs version: 2.1.0
+- elnebuloso.ci-compass version: 2.1.0
+- elnebuloso.ci-phing-commons version: 2.4.0
+- elnebuloso.docker version: 2.9.0
+- elnebuloso.docker-portainer version: 1.3.0
+- elnebuloso.docker-swagger-editor version: 2.2.0
+- elnebuloso.docker-swagger-generator version: 2.2.0
+- geerlingguy.ntp version: 1.4.2
+- geerlingguy.composer version: 1.6.1
+- geerlingguy.nodejs version: 4.1.0
 
 
 ## [3.10.0] - 2017-04-21

@@ -26,7 +26,7 @@ Vagrant.configure(2) do |config|
     config.vm.provision "shell", inline: "ln -nsf /vagrant/provision/box-play.sh /usr/local/bin/box-play"
     config.vm.provision "shell", inline: "ln -nsf /vagrant/provision/box-roles.sh /usr/local/bin/box-roles"
 
-    config.vm.provision "shell", inline: "sudo box"
+    # config.vm.provision "shell", inline: "sudo box"
 
     setting['vm_synced_folders'].each do |i|
         config.vm.synced_folder i['host'], i['guest']
