@@ -19,7 +19,7 @@ fi;
 rm -rf /root/.ssh
 mkdir -p /root/.ssh
 
-find /vagrant/dot/ssh/ -type f -name '*.pub' -exec cat {} \; -exec echo "" \; >> /root/.ssh/authorized_keys
+find /vagrant/dot/ssh/ -type f -name '*.pub' -exec cat {} \; -exec echo "" \; > /root/.ssh/authorized_keys
 
 chmod 700 /root/.ssh
 chmod 600 /root/.ssh/authorized_keys

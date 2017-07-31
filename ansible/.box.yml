@@ -2,30 +2,89 @@
 - hosts: all
 
   vars_files:
-    - vars/all.yml
+    - ../vagrant.yml
 
   roles:
-    # system roles
-    - {role: elnebuloso.server-base, tags: ['system']}
-    - {role: elnebuloso.pip, tags: ['system', 'system.pip']}
-    - {role: geerlingguy.ntp, tags: ['system', 'system.ntp']}
+    - role: elnebuloso.server-base
+      tags:
+        - system
 
-    # php based roles
-    - {role: elnebuloso.php71, tags: ['php', 'php.composer']}
-    - {role: geerlingguy.composer, tags: ['php', 'php.composer']}
+    - role: geerlingguy.ntp
+      tags:
+        - system
 
-    # ci based roles
-    - {role: elnebuloso.ci, tags: ['ci', 'ci.base']}
-    - {role: elnebuloso.ci-vcs, tags: ['ci', 'ci.vcs']}
-    - {role: elnebuloso.ci-compass, tags: ['ci', 'ci.compass']}
-    - {role: elnebuloso.ci-phing-commons, tags: ['ci', 'ci.composer', 'php']}
-    - {role: geerlingguy.nodejs, tags: ['ci', 'ci.nodejs']}
-    - {role: ocha.yarn, tags: ['ci', 'ci.yarn']}
+    - role: tersmitten.locales
+      tags:
+        - system
 
-    # docker based roles
-    - {role: elnebuloso.docker, tags: ['docker', 'docker', 'docker.portainer', 'docker.mysql', 'docker.memcached', 'docker.swagger.editor', 'docker.swagger.generator']}
-    - {role: elnebuloso.docker-portainer, tags: ['docker', 'docker.portainer']}
-    - {role: elnebuloso.docker-mysql, tags: ['docker', 'docker.mysql']}
-    - {role: elnebuloso.docker-memcached, tags: ['docker', 'docker.memcached']}
-    - {role: elnebuloso.docker-swagger-editor, tags: ['docker', 'docker.swagger', 'docker.swagger.editor']}
-    - {role: elnebuloso.docker-swagger-generator, tags: ['docker', 'docker.swagger', 'docker.swagger.generator']}
+    - role: elnebuloso.php7
+      tags:
+        - php
+
+    - role: geerlingguy.composer
+      tags:
+        - php
+
+    - role: elnebuloso.git
+      tags:
+        - ci
+
+    - role: elnebuloso.subversion
+      tags:
+        - ci
+
+    - role: elnebuloso.optipng
+      tags:
+        - ci
+
+    - role: elnebuloso.jpegoptim
+      tags:
+        - ci
+
+    - role: elnebuloso.yui-compressor
+      tags:
+        - ci
+
+    - role: elnebuloso.closure-compiler
+      tags:
+        - ci
+
+    - role: elnebuloso.compass
+      tags:
+        - ci
+
+    - role: geerlingguy.nodejs
+      tags:
+        - nodejs
+
+    - role: ocha.yarn
+      tags:
+        - nodejs
+
+    - role: elnebuloso.docker
+      tags:
+        - docker
+
+    - role: elnebuloso.docker
+      tags:
+        - docker
+
+    - role: elnebuloso.docker-memcached
+      tags:
+        - docker
+
+    - role: elnebuloso.docker-mysql
+      tags:
+        - docker
+
+    - role: elnebuloso.docker-portainer
+      tags:
+        - docker
+
+    - role: elnebuloso.docker-swagger-editor
+      tags:
+        - docker
+
+    - role: elnebuloso.docker-swagger-generator
+      tags:
+        - docker

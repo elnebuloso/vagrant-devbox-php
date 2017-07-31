@@ -5,14 +5,18 @@ full stack php development box
 ## features
 
 - ubuntu 16.04 LTS
-- ansible >= 2.2.0
+- ansible >= 2.3.0
 - php 7.1 + apache2
-- php phing and commons
 - php composer
-- continuous integration tools, e.g. optipng, jpegoptim, yui-compressor, closure-compiler, compass
+- optipng, 
+- jpegoptim, 
+- yui-compressor
+- closure-compiler
+- compass
 - docker
 - docker mysql
 - docker memcached
+- docker portainer
 - docker swagger-editor
 - docker swagger-generator
 
@@ -24,8 +28,7 @@ full stack php development box
 
 ## setup
 
-- copy vagrant.yml.tpl as vagrant.yml to configure vagrant provisioning
-- copy ansible/vars/all.yml.tpl as vars/all.yml to configure ansible provisioning
+- copy vagrant.yml.tpl as vagrant.yml to configure provisioning
 
 ## ansible provisioning
 
@@ -49,26 +52,6 @@ sudo box-play
 sudo box-play --tags "system"
 sudo box-play --skip-tags "system"
 ```
-
-### global installed roles through ansible galaxy
-
-- https://galaxy.ansible.com/elnebuloso/server-base/
-- https://galaxy.ansible.com/elnebuloso/pip/
-- https://galaxy.ansible.com/elnebuloso/php71/
-- https://galaxy.ansible.com/elnebuloso/ci/
-- https://galaxy.ansible.com/elnebuloso/ci-vcs/
-- https://galaxy.ansible.com/elnebuloso/ci-compass/
-- https://galaxy.ansible.com/elnebuloso/ci-phing-commons/
-- https://galaxy.ansible.com/elnebuloso/docker/
-- https://galaxy.ansible.com/elnebuloso/docker-portainer/
-- https://galaxy.ansible.com/elnebuloso/docker-mysql/
-- https://galaxy.ansible.com/elnebuloso/docker-memcached/
-- https://galaxy.ansible.com/elnebuloso/docker-swagger-editor/
-- https://galaxy.ansible.com/elnebuloso/docker-swagger-generator/
-- https://galaxy.ansible.com/geerlingguy/composer/
-- https://galaxy.ansible.com/geerlingguy/nodejs/
-- https://galaxy.ansible.com/geerlingguy/ntp/
-- https://galaxy.ansible.com/ocha/yarn/
 
 ## connecting the box over ssh
 

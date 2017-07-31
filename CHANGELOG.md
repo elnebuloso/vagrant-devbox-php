@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [3.12.0] - 2017-07-31
+### Changed
+- updated roles
+- updated provisioning
+
+
 ## [3.11.0] - 2017-04-22
 ### Changed
 - elnebuloso.server-base version: 2.7.0
