@@ -100,3 +100,7 @@ sudo box-play --skip-tags "system"
 
 - http://swagger-generator.box.entwickl.de
 - https://hub.docker.com/r/swaggerapi/swagger-generator
+
+#### docker phing-commons
+
+- https://hub.docker.com/r/elnebuloso/phing-commons/
