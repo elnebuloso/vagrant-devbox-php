@@ -19,6 +19,7 @@ full stack php development box
 - docker portainer
 - docker swagger-editor
 - docker swagger-generator
+- docker phing-commons
 
 ## requirements
 
