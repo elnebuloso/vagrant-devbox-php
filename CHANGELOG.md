@@ -9,7 +9,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - updated roles
 - updated provisioning
+- removed phing-commons, available through docker, run:
+- automatic ansible provisioning on vagrant up / vagrant reload --provision
 
+```
+docker run -v ${PWD}:/app elnebuloso/phing-commons:php71-latest phing
+docker run -v ${PWD}:/app elnebuloso/phing-commons:php71-10.5.0 phing
+```
 
 ## [3.11.0] - 2017-04-22
 ### Changed
