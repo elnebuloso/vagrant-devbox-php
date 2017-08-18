@@ -1,0 +1,17 @@
+---
+- name: remove packages
+  apt: pkg={{ item }} state=absent
+  with_items:
+    - node
+    - npm
+
+- name: remove profile.d entry
+  file: path=/etc/profile.d/npm.sh state=absent
+
+- name: source nvm
+  become: yes
+  become_user: "{{ ansible_user_id }}"
+  shell: "source ~/.nvm/nvm.sh"
+  args:
+     executable: /bin/bash
+  changed_when: false

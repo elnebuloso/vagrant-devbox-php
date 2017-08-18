@@ -2,6 +2,6 @@
 
 ################################################################################################
 
-sudo ansible-galaxy install -f -r /vagrant/ansible/.box-roles.yml
+sudo ansible-galaxy install -r /vagrant/ansible/.box-roles.yml
 
 ################################################################################################

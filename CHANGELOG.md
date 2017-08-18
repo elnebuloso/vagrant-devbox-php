@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [3.13.0] - 2017-08-19
+### Changed
+- elnebuloso.nvm version: 1.0.0
+- removed geerlingguy.nodejs
+
+
 ## [3.12.0] - 2017-07-31
 ### Changed
 - updated roles

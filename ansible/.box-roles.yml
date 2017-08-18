@@ -47,9 +47,9 @@
 - src: elnebuloso.compass
   version: 1.0.0
 
-# https://galaxy.ansible.com/geerlingguy/nodejs/
-- src: geerlingguy.nodejs
-  version: 4.1.1
+# https://galaxy.ansible.com/elnebuloso/nvm/
+- src: elnebuloso.nvm
+  version: 1.0.0
 
 # https://galaxy.ansible.com/ocha/yarn/
 - src: ocha.yarn

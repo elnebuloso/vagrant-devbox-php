@@ -53,7 +53,11 @@
       tags:
         - ci
 
-    - role: geerlingguy.nodejs
+    - role: elnebuloso.nvm
+      tags:
+        - nodejs
+
+    - role: remove-geerlingguy.nodejs
       tags:
         - nodejs
 
