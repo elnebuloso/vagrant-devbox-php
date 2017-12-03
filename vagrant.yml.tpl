@@ -11,10 +11,6 @@ vm_synced_folders:
 
 ############################################################################################
 
-# https://galaxy.ansible.com/elnebuloso/server-base/
-server_base_apt_upgrade: "safe"
-server_base_install_linux_image_extra: "no"
-
 # https://galaxy.ansible.com/elnebuloso/php7/
 php7_version: "7.1"
 

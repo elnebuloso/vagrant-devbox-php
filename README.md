@@ -5,7 +5,7 @@ full stack php development box
 ## features
 
 - ubuntu 16.04 LTS
-- ansible >= 2.3.0
+- ansible >= 2.4.0
 - php 7.1 + apache2
 - php composer
 - optipng, 
@@ -13,6 +13,7 @@ full stack php development box
 - yui-compressor
 - closure-compiler
 - compass
+- nodejs
 - docker
 - docker mysql
 - docker memcached
@@ -31,27 +32,14 @@ full stack php development box
 
 - copy vagrant.yml.tpl as vagrant.yml to configure provisioning
 
-## ansible provisioning
+## provisioning
 
-### vagrant auto provisioning with roles and playbook
+- the box will be automatically provisioned through vagrant
 
 ```
 sudo box
-```
-
-### vagrant auto provisioning installing ansible roles
-
-```
-sudo box-roles
-sudo box-roles force
-```
-
-### vagrant auto provisioning ansible playbook 
-
-```
-sudo box-play
-sudo box-play --tags "system"
-sudo box-play --skip-tags "system"
+sudo box --roles
+sudo box --roles --force
 ```
 
 ## connecting the box over ssh

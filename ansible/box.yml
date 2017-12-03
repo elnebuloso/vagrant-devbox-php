@@ -5,22 +5,25 @@
     - ../vagrant.yml
 
   roles:
-#    - role: elnebuloso.server-base
-#    - role: geerlingguy.ntp
-#    - role: tersmitten.locales
+    - role: elnebuloso.package-upgrade
+    - role: elnebuloso.server-base
+    - role: geerlingguy.ntp
+    - role: tersmitten.locales
 
-#    - role: elnebuloso.php7
-#    - role: geerlingguy.composer
+    - role: elnebuloso.php7
+    - role: geerlingguy.composer
 
-#    - role: elnebuloso.git
-#    - role: elnebuloso.subversion
-#    - role: elnebuloso.optipng
-#    - role: elnebuloso.jpegoptim
-#    - role: elnebuloso.yui-compressor
-#    - role: elnebuloso.closure-compiler
-#    - role: elnebuloso.compass
-#    - role: geerlingguy.nodejs
-#    - role: ocha.yarn
+    - role: elnebuloso.git
+    - role: elnebuloso.subversion
+    - role: elnebuloso.optipng
+    - role: elnebuloso.jpegoptim
+    - role: elnebuloso.yui-compressor
+    - role: elnebuloso.closure-compiler
+    - role: elnebuloso.compass
+    - role: geerlingguy.nodejs
+    - role: ocha.yarn
+
+    - role: elnebuloso.package-cleanup
 
 #    - role: elnebuloso.docker
 #    - role: elnebuloso.docker-memcached
