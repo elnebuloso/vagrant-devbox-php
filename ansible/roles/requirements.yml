@@ -3,21 +3,9 @@
 - src: elnebuloso.server-base
   version: 2.9.0
 
-# https://galaxy.ansible.com/geerlingguy/ntp/
-- src: geerlingguy.ntp
-  version: 1.5.2
-
-# https://galaxy.ansible.com/tersmitten/locales/
-- src: tersmitten.locales
-  version: v1.0.9
-
 # https://galaxy.ansible.com/elnebuloso/php7/
 - src: elnebuloso.php7
   version: 1.0.0
-
-# https://galaxy.ansible.com/geerlingguy/composer/
-- src: geerlingguy.composer
-  version: 1.6.1
 
 # https://galaxy.ansible.com/elnebuloso/git/
 - src: elnebuloso.git
@@ -41,19 +29,11 @@
 
 # https://galaxy.ansible.com/elnebuloso/closure-compiler/
 - src: elnebuloso.closure-compiler
-  version: 1.0.0
+  version: 1.1.0
 
 # https://galaxy.ansible.com/elnebuloso/compass/
 - src: elnebuloso.compass
-  version: 1.0.0
-
-# https://galaxy.ansible.com/elnebuloso/nvm/
-- src: elnebuloso.nvm
-  version: 1.0.0
-
-# https://galaxy.ansible.com/ocha/yarn/
-- src: ocha.yarn
-  version: v1.1.0
+  version: 1.2.0
 
 # https://galaxy.ansible.com/elnebuloso/docker/
 - src: elnebuloso.docker
@@ -78,3 +58,25 @@
 # https://galaxy.ansible.com/elnebuloso/docker-swagger-generator/
 - src: elnebuloso.docker-swagger-generator
   version: 2.3.0
+
+################################################################################################
+
+# https://galaxy.ansible.com/geerlingguy/composer/
+- src: geerlingguy.composer
+  version: 1.6.1
+
+# https://galaxy.ansible.com/geerlingguy/nodejs/
+- src: geerlingguy.nodejs
+  version: 4.1.2
+
+# https://galaxy.ansible.com/geerlingguy/ntp/
+- src: geerlingguy.ntp
+  version: 1.5.2
+
+# https://galaxy.ansible.com/tersmitten/locales/
+- src: tersmitten.locales
+  version: v1.0.10
+
+# https://galaxy.ansible.com/ocha/yarn/
+- src: ocha.yarn
+  version: v1.1.1

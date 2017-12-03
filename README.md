@@ -13,7 +13,6 @@ full stack php development box
 - yui-compressor
 - closure-compiler
 - compass
-- nvm
 - docker
 - docker mysql
 - docker memcached
