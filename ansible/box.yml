@@ -23,6 +23,9 @@
     - role: geerlingguy.nodejs
     - role: ocha.yarn
 
+    - role: elnebuloso.docker-compose
+    - role: elnebuloso.docker-pip
+
     - role: elnebuloso.package-cleanup
 
 #    - role: elnebuloso.docker

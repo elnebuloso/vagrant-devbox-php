@@ -39,6 +39,14 @@
 - src: elnebuloso.docker
   version: 2.10.0
 
+# https://galaxy.ansible.com/elnebuloso/docker-compose/
+- src: elnebuloso.docker-compose
+  version: 1.0.0
+
+# https://galaxy.ansible.com/elnebuloso/docker-pip/
+- src: elnebuloso.docker-pip
+  version: 1.0.0
+
 # https://galaxy.ansible.com/elnebuloso/docker-memcached/
 - src: elnebuloso.docker-memcached
   version: 1.3.0
