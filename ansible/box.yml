@@ -23,14 +23,13 @@
     - role: geerlingguy.nodejs
     - role: ocha.yarn
 
+    - role: elnebuloso.docker
     - role: elnebuloso.docker-compose
     - role: elnebuloso.docker-pip
+    - role: elnebuloso.docker-memcached
+    - role: elnebuloso.docker-mysql
+    - role: elnebuloso.docker-portainer
+    - role: elnebuloso.docker-swagger-editor
+    - role: elnebuloso.docker-swagger-generator
 
     - role: elnebuloso.package-cleanup
-
-#    - role: elnebuloso.docker
-#    - role: elnebuloso.docker-memcached
-#    - role: elnebuloso.docker-mysql
-#    - role: elnebuloso.docker-portainer
-#    - role: elnebuloso.docker-swagger-editor
-#    - role: elnebuloso.docker-swagger-generator

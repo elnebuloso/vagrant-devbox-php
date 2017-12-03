@@ -20,7 +20,6 @@ full stack php development box
 - docker portainer
 - docker swagger-editor
 - docker swagger-generator
-- docker phing-commons
 
 ## requirements
 
@@ -45,12 +44,10 @@ sudo box --roles --force
 ## connecting the box over ssh
 
 - your-hostname-from-vagrant-yml:22
-- provisioning will create automatically dot/ssh/vagrant folder with private and public keys
-  - id_rsa
-  - id_rsa.pub
-  - id_rsa.ppk for putty pageant
-- if there is an existing folder dot/ssh/vagrant folder with private and public keys, then provisioning skips the creation
-- you can put your created private and public keys in dot/ssh/vagrant, so they will be used
+- provisioning creates automatically .ssh/root credentials
+- provisioning creates automatically .ssh/vagrant credentials
+- public keys under .ssh/authorized_keys will be copied into authorized_keys of root user
+- public keys under .ssh/authorized_keys will be copied into authorized_keys of vagrant user
 
 ## features (default settings and default role configurations)
 
@@ -88,7 +85,3 @@ sudo box --roles --force
 
 - http://swagger-generator.box.entwickl.de
 - https://hub.docker.com/r/swaggerapi/swagger-generator
-
-#### docker phing-commons
-
-- https://hub.docker.com/r/elnebuloso/phing-commons/
