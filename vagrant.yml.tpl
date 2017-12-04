@@ -14,6 +14,7 @@ vm_synced_folders:
 # https://galaxy.ansible.com/elnebuloso/docker-login/
 docker_login_dockerhub_username: ""
 docker_login_dockerhub_password: ""
+docker_login_dockerhub_email: ""
 
 # https://galaxy.ansible.com/elnebuloso/php7/
 php7_version: "7.1"
