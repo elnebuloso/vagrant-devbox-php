@@ -45,7 +45,7 @@
 
 # https://galaxy.ansible.com/elnebuloso/docker-login/
 - src: elnebuloso.docker-login
-  version: 1.0.0
+  version: 1.1.0
 
 # https://galaxy.ansible.com/elnebuloso/docker-pip/
 - src: elnebuloso.docker-pip
