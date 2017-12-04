@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [4.1.0] - 2017-12-04
+### Changed
+- elnebuloso.docker-login
+- generate ssh keys only for root user
+
+
 ## [4.0.0] - 2017-12-03
 ### Changed
 - ssh key generation update

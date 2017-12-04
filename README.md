@@ -45,9 +45,11 @@ sudo box --roles --force
 
 - your-hostname-from-vagrant-yml:22
 - provisioning creates automatically .ssh/root credentials
-- provisioning creates automatically .ssh/vagrant credentials
+  - id_rsa
+  - id_rsa.pub
+  - id_rsa.ppk (putty pageant)
+- existing folder .ssh/root will be used for root user and will not be overwritten
 - public keys under .ssh/authorized_keys will be copied into authorized_keys of root user
-- public keys under .ssh/authorized_keys will be copied into authorized_keys of vagrant user
 
 ## features (default settings and default role configurations)
 

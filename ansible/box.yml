@@ -25,6 +25,7 @@
 
     - role: elnebuloso.docker
     - role: elnebuloso.docker-compose
+    - role: elnebuloso.docker-login
     - role: elnebuloso.docker-pip
     - role: elnebuloso.docker-memcached
     - role: elnebuloso.docker-mysql
