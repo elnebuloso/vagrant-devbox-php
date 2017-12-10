@@ -1,13 +1,18 @@
 ---
 vm_hostname: "box.entwickl.de"
-vm_public_network: "192.168.178.100"
-vm_private_network: "192.168.33.100"
 
 vm_vbguest_auto_update: false
 vm_vbguest_no_remote: true
 
 vm_synced_folders:
   - {host: 'D:\\web', guest: '/var/www'}
+
+############################################################################################
+
+# optional configuration values
+
+# vm_gui: false
+# vm_private_ip: "192.168.33.100"
 
 ############################################################################################
 

@@ -8,11 +8,11 @@ Vagrant.configure(2) do |config|
     config.vm.box = "bento/ubuntu-16.04"
 
     config.vm.hostname = setting['vm_hostname']
-    config.vm.network "public_network", ip: setting['vm_public_network']
-    config.vm.network "private_network", ip: setting['vm_private_network']
+    config.vm.network "private_network", ip: setting.fetch('vm_private_ip', "192.168.33.100");
 
     config.vm.provider "virtualbox" do |v|
         v.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
+        v.gui = setting.fetch('vm_gui', false);
     end
 
     config.vbguest.auto_update = setting['vm_vbguest_auto_update']
