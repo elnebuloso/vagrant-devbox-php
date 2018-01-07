@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [4.3.0] - 2018-01-07
+### Changed
+- fixed puttykeygen
+
+
 ## [4.2.0] - 2017-12-10
 ### Changed
 - vagrant config setting vm_private_ip
