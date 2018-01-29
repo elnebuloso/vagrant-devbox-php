@@ -23,6 +23,7 @@ docker_login_dockerhub_email: ""
 
 # https://galaxy.ansible.com/elnebuloso/php7/
 php7_version: "7.1"
+php7_webserver_hostname: "box.entwickl.de"
 
 ############################################################################################
 
