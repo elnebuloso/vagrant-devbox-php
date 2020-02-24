@@ -1,6 +1,10 @@
+<img src="https://raw.githubusercontent.com/elnebuloso/vagrant-devbox-php/master/logo.png" width="100%"/>
+
 # vagrant-devbox-php
 
-full stack php development box
+Virtual Box Vagrant Full Stack PHP Development Box
+
+![Release](https://img.shields.io/badge/-out%20of%20support-red.svg)
 
 ## features
 
