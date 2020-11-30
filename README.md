@@ -4,7 +4,7 @@
 
 Virtual Box Vagrant Full Stack PHP Development Box
 
-![Release](https://img.shields.io/badge/-abandoned-red.svg)
+![abandoned](https://img.shields.io/badge/project-abandoned-red)
 
 ## features
 
