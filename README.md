@@ -1,5 +1,3 @@
-<img src="https://raw.githubusercontent.com/elnebuloso/vagrant-devbox-php/master/logo.png" width="100%"/>
-
 # vagrant-devbox-php
 
 Virtual Box Vagrant Full Stack PHP Development Box
